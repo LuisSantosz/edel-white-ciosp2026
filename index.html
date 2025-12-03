@@ -1,0 +1,1806 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Edel White Brasil – Relacionamento & Presença no Mercado</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonte sofisticada -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --brand-red: #F9423A;
+      --brand-dark: #050509;
+      --brand-dark-soft: #0b0d14;
+      --brand-light: #f8f9fb;
+      --brand-gray: #9ea3b0;
+      --radius-lg: 1.5rem;
+      --radius-md: 1rem;
+      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.3);
+      --shadow-card: 0 18px 40px rgba(0, 0, 0, 0.25);
+      --transition-fast: 0.25s ease;
+      --transition-medium: 0.4s ease;
+      scroll-behavior: smooth;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top, #181b24 0, #050509 55%);
+      color: #ffffff;
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* ====== HEADER / NAVBAR ====== */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      backdrop-filter: blur(22px);
+      background: linear-gradient(to bottom, rgba(5, 5, 9, 0.92), rgba(5, 5, 9, 0.5), transparent);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: baseline;
+      gap: 0.25rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 1rem;
+    }
+
+    .logo span {
+      color: var(--brand-red);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.75rem;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 0.25rem;
+      opacity: 0.7;
+      transition: opacity var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 0;
+      background: linear-gradient(90deg, var(--brand-red), #ff4d5e);
+      border-radius: 999px;
+      transition: width var(--transition-fast);
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
+      transform: translateY(-1px);
+    }
+
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      border-radius: 999px;
+      border: none;
+      padding: 0.55rem 1.25rem;
+      font-size: 0.85rem;
+      cursor: pointer;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast), color var(--transition-fast);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-outline:hover {
+      border-color: rgba(255, 255, 255, 0.5);
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--brand-red), #ff4d5e);
+      color: #ffffff;
+      box-shadow: 0 12px 30px rgba(249, 66, 58, 0.45);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px) scale(1.01);
+      box-shadow: 0 18px 40px rgba(249, 66, 58, 0.55);
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 999px;
+      padding: 0.45rem 0.75rem;
+      background: rgba(5, 5, 9, 0.8);
+      cursor: pointer;
+      font-size: 0.7rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    /* ====== LAYOUT PRINCIPAL ====== */
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3.5rem;
+    }
+
+    section {
+      padding: 4rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-title-wrap {
+      max-width: 480px;
+    }
+
+    .section-eyebrow {
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      color: var(--brand-gray);
+      margin-bottom: 0.35rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--brand-gray);
+      max-width: 480px;
+    }
+
+    /* ====== HERO ====== */
+
+    #inicio {
+      padding-top: 3.5rem;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.7fr);
+      gap: 2.75rem;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--brand-gray);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #fff, var(--brand-red));
+      box-shadow: 0 0 15px rgba(255, 69, 90, 0.7);
+    }
+
+    .hero-title {
+      font-size: clamp(2.2rem, 3vw + 1.2rem, 3.2rem);
+      line-height: 1.05;
+      margin-bottom: 1.1rem;
+    }
+
+    .hero-title span {
+      color: var(--brand-red);
+    }
+
+    .hero-text {
+      font-size: 0.95rem;
+      color: var(--brand-gray);
+      max-width: 480px;
+      margin-bottom: 0;
+    }
+
+    .hero-visual {
+      position: relative;
+      padding: 1.5rem;
+      border-radius: 2rem;
+      background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.14), transparent 55%),
+                  linear-gradient(145deg, #12141d, #050509);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero-visual-tag {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      background: rgba(5, 5, 9, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--brand-gray);
+    }
+
+    .hero-visual-circle {
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(circle at 15% 0, rgba(255, 255, 255, 0.16), transparent 60%),
+                  radial-gradient(circle at 85% 100%, rgba(249, 66, 58, 0.5), transparent 55%);
+      opacity: 0.85;
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+
+    .hero-visual-inner {
+      position: relative;
+      border-radius: 1.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 1rem;
+      backdrop-filter: blur(26px);
+      background: linear-gradient(145deg, rgba(5, 5, 9, 0.88), rgba(5, 5, 9, 0.95));
+      box-shadow: var(--shadow-card);
+      z-index: 1;
+    }
+
+    .hero-visual-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.1rem;
+    }
+
+    .hero-visual-dot-row {
+      display: flex;
+      gap: 0.4rem;
+    }
+
+    .hero-visual-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .hero-visual-pill {
+      font-size: 0.7rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--brand-gray);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    .hero-visual-main {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .hero-visual-highlight {
+      font-size: 0.95rem;
+    }
+
+    .hero-visual-highlight h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .hero-visual-highlight p {
+      font-size: 0.8rem;
+      color: var(--brand-gray);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-visual-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      font-size: 0.7rem;
+    }
+
+    .hero-visual-badges span {
+      padding: 0.25rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      color: var(--brand-gray);
+    }
+
+    .hero-visual-metrics {
+      display: grid;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+    }
+
+    .hero-visual-metric {
+      padding: 0.5rem 0.6rem;
+      border-radius: 0.9rem;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: linear-gradient(135deg, rgba(249, 66, 58, 0.12), rgba(5, 5, 9, 0.85));
+    }
+
+    .hero-visual-metric span {
+      display: block;
+      color: var(--brand-gray);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 0.1rem;
+    }
+
+    .hero-visual-metric strong {
+      font-size: 0.9rem;
+    }
+
+    /* ====== PRODUTOS ====== */
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .product-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      padding: 1.1rem;
+      background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.1), transparent 45%),
+                  linear-gradient(145deg, #12141d, #050509);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform var(--transition-medium), box-shadow var(--transition-medium), border-color var(--transition-medium), background var(--transition-medium);
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-card);
+      border-color: rgba(255, 255, 255, 0.16);
+      background: radial-gradient(circle at top left, rgba(249, 66, 58, 0.18), transparent 45%),
+                  linear-gradient(145deg, #151823, #050509);
+    }
+
+    .product-tag {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--brand-gray);
+      margin-bottom: 0.6rem;
+    }
+
+    .product-name {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 0.35rem;
+    }
+
+    .product-desc {
+      font-size: 0.8rem;
+      color: var(--brand-gray);
+      margin-bottom: 0.8rem;
+      min-height: 42px;
+    }
+
+    .product-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.75rem;
+      color: var(--brand-gray);
+    }
+
+    .product-meta span strong {
+      color: #ffffff;
+    }
+
+    .product-pill {
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    /* ====== CUPONS ====== */
+
+    .coupon-layout {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 1.75rem;
+      align-items: stretch;
+    }
+
+    .coupon-left {
+      border-radius: var(--radius-lg);
+      padding: 1.4rem;
+      background: linear-gradient(145deg, #12141d, #050509);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .coupon-left h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .coupon-left p {
+      font-size: 0.85rem;
+      color: var(--brand-gray);
+      margin-bottom: 1.2rem;
+      max-width: 480px;
+    }
+
+    .coupon-cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+    }
+
+    .coupon-card {
+      border-radius: 1rem;
+      padding: 0.8rem;
+      background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), transparent 45%),
+                  linear-gradient(145deg, #171a24, #050509);
+      border: 1px dashed rgba(255, 255, 255, 0.14);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .coupon-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--brand-gray);
+      margin-bottom: 0.35rem;
+    }
+
+    .coupon-code {
+      font-family: "Inter", monospace;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      margin-bottom: 0.45rem;
+    }
+
+    .coupon-extra {
+      font-size: 0.7rem;
+      color: var(--brand-gray);
+      margin-bottom: 0.5rem;
+    }
+
+    .coupon-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.7rem;
+      color: var(--brand-gray);
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .coupon-footer button {
+      font-size: 0.7rem;
+      padding: 0.25rem 0.7rem;
+    }
+
+    .coupon-right {
+      border-radius: var(--radius-lg);
+      padding: 1.4rem;
+      background: radial-gradient(circle at top left, rgba(249, 66, 58, 0.22), transparent 55%),
+                  linear-gradient(145deg, #151823, #050509);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.1rem;
+    }
+
+    .coupon-right h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .coupon-right p {
+      font-size: 0.8rem;
+      color: var(--brand-gray);
+      margin-bottom: 0.8rem;
+    }
+
+    .coupon-highlight-metric {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+
+    .coupon-highlight-label {
+      font-size: 0.75rem;
+      color: var(--brand-gray);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 0.6rem;
+    }
+
+    .coupon-logos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      font-size: 0.7rem;
+      color: var(--brand-gray);
+    }
+
+    .coupon-logos span {
+      padding: 0.18rem 0.5rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    /* ====== CARROSSEL ====== */
+
+    .carousel-container {
+      border-radius: var(--radius-lg);
+      padding: 1.3rem;
+      background: linear-gradient(145deg, #12141d, #050509);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 1.4rem;
+      align-items: center;
+    }
+
+    .carousel-main {
+      position: relative;
+      border-radius: 1.2rem;
+      overflow: hidden;
+      background: #050509;
+      min-height: 220px;
+    }
+
+    .carousel-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity var(--transition-medium), transform 6s ease-out;
+      opacity: 0;
+      transform: scale(1.03);
+    }
+
+    .carousel-main img.active {
+      opacity: 1;
+      transform: scale(1.0);
+    }
+
+    .carousel-nav {
+      position: absolute;
+      inset: auto 0 0 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.6rem 0.9rem;
+      background: linear-gradient(to top, rgba(5, 5, 9, 0.9), transparent);
+    }
+
+    .carousel-dots {
+      display: flex;
+      gap: 0.35rem;
+    }
+
+    .carousel-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      background: transparent;
+      cursor: pointer;
+      opacity: 0.6;
+    }
+
+    .carousel-dot.active {
+      opacity: 1;
+      background: #ffffff;
+    }
+
+    .carousel-buttons {
+      display: flex;
+      gap: 0.4rem;
+    }
+
+    .carousel-btn {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      background: rgba(5, 5, 9, 0.8);
+      color: #ffffff;
+      font-size: 0.7rem;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      transition: background var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .carousel-btn:hover {
+      background: #ffffff;
+      color: #000000;
+      transform: translateY(-1px);
+    }
+
+    .carousel-text {
+      font-size: 0.85rem;
+      color: var(--brand-gray);
+    }
+
+    .carousel-text h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+      color: #ffffff;
+    }
+
+    .carousel-list {
+      margin-top: 0.75rem;
+      font-size: 0.8rem;
+      list-style: none;
+      display: grid;
+      gap: 0.25rem;
+    }
+
+    .carousel-list li::before {
+      content: "•";
+      margin-right: 0.4rem;
+      color: var(--brand-red);
+    }
+
+    footer {
+      padding: 1.5rem;
+      font-size: 0.75rem;
+      color: var(--brand-gray);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      text-align: center;
+    }
+
+    /* ====== ANIMAÇÕES DE ENTRADA ====== */
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(15px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ====== MODAL REPRESENTANTES ====== */
+
+    .representantes-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--transition-medium);
+      z-index: 1000;
+    }
+
+    .representantes-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .representantes-modal {
+      max-width: 960px;
+      width: 100%;
+      margin: 1.5rem;
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      background: radial-gradient(circle at top left, rgba(249, 66, 58, 0.25), transparent 55%),
+                  linear-gradient(145deg, #151823, #050509);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .representantes-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.25rem;
+      gap: 1rem;
+    }
+
+    .representantes-header h2 {
+      font-size: 1.2rem;
+    }
+
+    .representantes-header p {
+      font-size: 0.85rem;
+      color: var(--brand-gray);
+      max-width: 480px;
+    }
+
+    .representantes-close {
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(5, 5, 9, 0.9);
+      color: #ffffff;
+      padding: 0.3rem 0.8rem;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      cursor: pointer;
+      transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .representantes-close:hover {
+      background: #ffffff;
+      color: #000000;
+      transform: translateY(-1px);
+    }
+
+    .representantes-body {
+      display: grid;
+      grid-template-columns: 1.4fr 1.6fr;
+      gap: 1.5rem;
+      align-items: stretch;
+    }
+
+    .representantes-map {
+      border-radius: 1.1rem;
+      padding: 1rem;
+      background: linear-gradient(145deg, #12141d, #050509);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.8rem;
+    }
+
+    .representantes-map-title {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--brand-gray);
+      margin-bottom: 0.6rem;
+    }
+
+    .br-map {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.4rem;
+      margin-top: 0.4rem;
+    }
+
+    .br-map button {
+      border-radius: 0.65rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(5, 5, 9, 0.9);
+      color: #ffffff;
+      padding: 0.3rem 0.4rem;
+      font-size: 0.75rem;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.15rem;
+      transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .br-map button span {
+      font-size: 0.65rem;
+      color: var(--brand-gray);
+    }
+
+    .br-map button.active,
+    .br-map button:hover {
+      background: linear-gradient(135deg, var(--brand-red), #ff4d5e);
+      border-color: rgba(255, 255, 255, 0.6);
+      box-shadow: 0 10px 24px rgba(249, 66, 58, 0.5);
+      transform: translateY(-1px);
+    }
+
+    .representantes-list {
+      border-radius: 1.1rem;
+      padding: 1rem;
+      background: linear-gradient(145deg, #12141d, #050509);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .representantes-list-header {
+      margin-bottom: 0.5rem;
+    }
+
+    .representantes-list-header span {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--brand-gray);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .representantes-list-header h3 {
+      font-size: 1rem;
+    }
+
+    .representante-card {
+      border-radius: 0.9rem;
+      padding: 0.7rem 0.8rem;
+      background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.06), transparent 60%),
+                  linear-gradient(145deg, #171a24, #050509);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .representante-card strong {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-size: 0.88rem;
+    }
+
+    .representante-card div {
+      font-size: 0.78rem;
+      color: var(--brand-gray);
+    }
+
+    .representantes-empty {
+      font-size: 0.8rem;
+      color: var(--brand-gray);
+    }
+
+    .representantes-regioes {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .regioes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.5rem;
+    }
+
+    .btn-regiao {
+      padding: 0.55rem;
+      border-radius: 0.7rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(5, 5, 9, 0.8);
+      color: #fff;
+      cursor: pointer;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      transition: 0.25s;
+    }
+
+    .btn-regiao:hover {
+      background: linear-gradient(135deg, var(--brand-red), #ff4d5e);
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.6);
+    }
+
+    @media (max-width: 768px) {
+      .representantes-body {
+        grid-template-columns: 1fr;
+      }
+
+      .br-map {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.6rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: #ffffff;
+  text-decoration: none;
+  box-shadow: 0 10px 20px rgba(18, 140, 126, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(18, 140, 126, 0.55);
+  opacity: 0.95;
+}
+
+
+    /* ====== RESPONSIVO ====== */
+
+    @media (max-width: 960px) {
+      #inicio {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        order: -1;
+      }
+
+      .coupon-layout,
+      .carousel-container {
+        grid-template-columns: 1fr;
+      }
+
+      .products-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        padding-inline: 1rem;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        padding: 0.75rem 1rem 1rem;
+        background: rgba(5, 5, 9, 0.98);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        flex-direction: column;
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform var(--transition-medium), opacity var(--transition-medium);
+      }
+
+      .nav-links.open {
+        transform: scaleY(1);
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+
+      main {
+        padding-inline: 1rem;
+      }
+
+      .hero-title {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ====== HEADER / NAVBAR ====== -->
+  <header>
+    <div class="nav">
+      <div class="logo">edel <span>white</span></div>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio" class="nav-link active">Início</a>
+        <a href="#sobre" class="nav-link">Relacionamento</a>
+        <a href="#produtos" class="nav-link">Premium</a>
+        <a href="#cupons" class="nav-link">Cupons</a>
+        <a href="#galeria" class="nav-link">Galeria</a>
+      </nav>
+
+      <div class="nav-cta">
+        <button class="btn btn-outline btn-palestras">Palestras</button>
+        <button class="btn btn-primary btn-representante">Falar com representante</button>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle">Menu</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ====== HERO ====== -->
+    <section id="inicio" class="fade-in">
+      <div class="hero-copy">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Presença Edel White no mercado
+        </div>
+        <h1 class="hero-title">
+          <br/>
+          A <span>Suiça</span> no Brasil.
+        </h1>
+        <p class="hero-text">
+          A Edel White consolida-se como parceira estratégica de consultórios, clínicas e redes de varejo odontológico. 
+          Mais do que produtos, entregamos experiência, confiança e uma jornada de LONGEVIDADE com os pacientes.
+        </p>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-visual-tag">Brand &amp; Market Relationship</div>
+        <div class="hero-visual-circle"></div>
+
+        <div class="hero-visual-inner">
+          <div class="hero-visual-header">
+            <div class="hero-visual-dot-row">
+              <span class="hero-visual-dot"></span>
+              <span class="hero-visual-dot"></span>
+              <span class="hero-visual-dot"></span>
+            </div>
+            <div class="hero-visual-pill">Edel White • Brasil</div>
+          </div>
+
+          <div class="hero-visual-main">
+            <div class="hero-visual-highlight">
+              <h3>Marca forte, presença constante.</h3>
+              <p>
+                Construção de relacionamento com foco em experiência do paciente, 
+                educação do profissional e presença qualificada no ponto de venda.
+              </p>
+              <div class="hero-visual-badges">
+                <span>Porgrama de treinamento</span>
+                <span>Relacionamento com distribuidoras</span>
+                <span>Cuidado com cliente</span>
+                <span>Ativo em eventos e ações</span>
+              </div>
+            </div>
+
+            <div class="hero-visual-metrics">
+              <div class="hero-visual-metric">
+                <span>Eventos &amp; Feiras</span>
+                <strong>CIOSP 2026</strong>
+              </div>
+              <div class="hero-visual-metric">
+                <span>Horário &amp; data</span>
+                <strong>28-30/01: 10h as 20h</strong>
+                <strong>31/01: 10h as 18h</strong>
+              </div>
+              <div class="hero-visual-metric">
+                <span>Confiança</span>
+                <strong>+10 anos de atuação no Brasil</strong>
+              </div>
+              <div class="hero-visual-metric">
+                <span>Foco</span>
+                <strong>Qualidade e Longevidade</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SOBRE / RELACIONAMENTO ====== -->
+    <section id="sobre" class="fade-in">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <div class="section-eyebrow">Relacionamento com o mercado</div>
+          <h2 class="section-title">Uma marca próxima de quem vende e de quem cuida.</h2>
+        </div>
+        <p class="section-subtitle">
+          Do consultório ao varejo, Edel White constrói uma presença sólida através de equipes comerciais ativas, 
+          suporte constante e uma comunicação visual que reforça tecnologia, cuidado e confiança.
+        </p>
+      </div>
+
+      <div class="carousel-container">
+        <div class="carousel-main">
+          <!-- Substitua os src pelas suas imagens reais -->
+          <img src="img/edel 4.jpg" class="carousel-image active" alt="Testes de qualidade" />
+          <img src="img/edel 3.jpg" class="carousel-image" alt="Profissional ensinado paciente a usar escova sonic" />
+          <img src="img/edel kids 3.jpg" class="carousel-image" alt="Profissional utilizando escova Edel White Kids para escovar a boca de uma criança " />
+
+          <div class="carousel-nav">
+            <div class="carousel-dots"></div>
+            <div class="carousel-buttons">
+              <button class="carousel-btn" data-direction="prev">&#10094;</button>
+              <button class="carousel-btn" data-direction="next">&#10095;</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-text">
+          <h3>Presença no dia a dia de quem decide.</h3>
+          <p>
+            Atuamos com relacionamento estratégico com distribuidores, representantes e líderes de opinião, 
+            reforçando o posicionamento premium da marca em cada contato.
+          </p>
+          <ul class="carousel-list">
+            <li>Suporte próximo ao time de vendas e representantes.</li>
+            <li>Materiais de PDV pensados para conversão no ponto de venda.</li>
+            <li>Ativações em eventos e feiras de grande relevância, incluindo CIOSP 2026.</li>
+            <li>Treinamentos focados em experiência do paciente e diferenciais de produto.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== PRODUTOS / PORTFÓLIO ====== -->
+    <section id="produtos" class="fade-in">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <div class="section-eyebrow">Premium Edel White</div>
+          <h2 class="section-title">Produtos com presença forte na rotina dos pacientes.</h2>
+        </div>
+        <p class="section-subtitle">
+          Nossos destaques no mercado vão muito além de produtos — entregamos experiências premium.
+        Cada item da Edel White é desenvolvido para transmitir sofisticação, tecnologia e excelência em cuidados bucais. 
+        Nossa linha combina design moderno, performance superior e uma sensação de qualidade que o consumidor percebe no primeiro uso.
+        </p>
+      </div>
+
+      <div class="products-grid">
+        <article class="product-card">
+          <div class="product-tag">Escovas Premium</div>
+          <h3 class="product-name">EESCOVA DE DENTES FLOSSERBRUSH ULTRASOFT</h3>
+          <p class="product-desc">
+            Cerdas ultrafinas e delicadas, indicadas para pacientes com sensibilidade gengival e pós-procedimentos.
+          </p>
+          <div class="product-meta">
+            <span>Principal canal: <strong>Consultórios &amp; distribuidores</strong></span>
+            <span class="product-pill">DESTAQUE EM INDICAÇÃO PROFSSIONAL</span>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-tag">Higiene diária</div>
+          <h3 class="product-name">CREME DENTAL ANTIPLACA + BRANQUEADOR</h3>
+          <p class="product-desc">
+            Formulação desenvolvida para cuidado completo, unindo proteção, brilho e sensação de limpeza prolongada.
+          </p>
+          <div class="product-meta">
+            <span>Foco: <strong>Rotina diária do paciente</strong></span>
+            <span class="product-pill">ESPUMA CONTROLADA - FLUOR BIODISPONIVEL</span>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-tag">Soluções específicas</div>
+          <h3 class="product-name">ANTISSEPTICO BUCAL FRESH + PROTECT</h3>
+          <p class="product-desc">
+            Linha voltada para potencializar tratamentos e oferecer uma experiência completa de cuidado bucal.
+          </p>
+          <div class="product-meta">
+            <span>Estratégia: <strong>Cross-sell com escovas e cremes</strong></span>
+            <span class="product-pill">COMBATE NATURAL AO MAU HALITO</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ====== CUPONS ====== -->
+    <section id="cupons" class="fade-in">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <div class="section-eyebrow">Ações &amp; Incentivos</div>
+          <h2 class="section-title">Cupons e campanhas para movimentar o canal.</h2>
+        </div>
+        <p class="section-subtitle">
+          Para nossos clientes, estamos disponibilizando cupons de desconto exclusivos para serem utilizados em campanhas, eventos e feiras 
+          Uma oportunidade perfeita para garantir suas compras com condições especiais e aproveitar benefícios únicos durante o evento.
+        </p>
+      </div>
+
+      <div class="coupon-layout">
+        <div class="coupon-left">
+          <h3>Campanhas ativas</h3>
+          <p>
+            Uma área exclusiva de cupons para campanhas, congressos e feiras, onde nossos clientes podem acessar 
+            benefícios únicos, ofertas especiais e condições exclusivas em cada evento Edel White.
+          </p>
+
+          <div class="coupon-cards">
+            <div class="coupon-card">
+              <div class="coupon-label">CIOSP 2026 • Lançamento</div>
+              <div class="coupon-code" data-coupon="CIOSP26">CIOSP26</div>
+              <div class="coupon-extra">
+                10% de desconto em campanhas de lançamento durante o CIOSP 2026 (28 a 31 de janeiro).
+              </div>
+              <div class="coupon-footer">
+                <span>Válido apenas no período do evento</span>
+                <button class="btn btn-outline btn-copy" data-coupon="CIOSP26">Copiar</button>
+              </div>
+            </div>
+
+            <div class="coupon-card">
+              <div class="coupon-label">TODOS OS PRODUTOS</div>
+              <div class="coupon-code" data-coupon="EDEL05">EDEL05</div>
+              <div class="coupon-extra">
+                Condição especial para profissionais parceiros e ações em consultórios.
+              </div>
+              <div class="coupon-footer">
+                <span>Uso restrito • Comercial</span>
+                <button class="btn btn-outline btn-copy" data-coupon="EDEL05">Copiar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="coupon-right">
+          <div>
+            <h3>Relacionamento que se traduz em resultado.</h3>
+            <p>
+              Nossa área de cupons foi criada para potencializar campanhas digitais, ações promocionais e experiências em eventos como o CIOSP 2026, 
+              oferecendo vantagens exclusivas para profissionais dentistas e consumidores finais que desejam conhecer e adquirir produtos Edel White com benefícios especiais.
+            </p>
+          </div>
+
+          <div>
+            <div class="coupon-highlight-metric">+ <span id="mockGrowth">27%</span></div>
+            <div class="coupon-highlight-label">Crescimento médio em campanhas com incentivo</div>
+
+            <div class="coupon-logos">
+              <span>CIOSP 2026</span>
+              <span>Redes de varejo</span>
+              <span>Distribuidores</span>
+              <span>Consultórios &amp; clínicas</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ====== GALERIA / CARROSSEL ====== -->
+    <section id="galeria" class="fade-in">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <div class="section-eyebrow">Galeria</div>
+          <h2 class="section-title">Momentos que reforçam a presença da Edel White.</h2>
+        </div>
+        <p class="section-subtitle">
+         Eventos, treinamentos, campanhas, congressos que fortalecem nosso relacionamento com o mercado
+        </p>
+      </div>
+
+      <div class="carousel-container">
+        <div class="carousel-main">
+          <img src="img/edel ciosp.jpeg" class="carousel-image active" alt="Evento com profissionais de odontologia" />
+          <img src="img/edel kids 1.jpg" class="carousel-image" alt="Apresentação de produtos para crianças" />
+          <img src="img/edel kids 2.jpg" class="carousel-image" alt="Ensinando crianças a fazerem higiene bucal" />
+          <img src="img/edel ciosp 1.jpg" class="carousel-image" alt="Ensinando crianças a fazerem higiene bucal" />
+
+          <div class="carousel-nav">
+            <div class="carousel-dots"></div>
+            <div class="carousel-buttons">
+              <button class="carousel-btn" data-direction="prev">&#10094;</button>
+              <button class="carousel-btn" data-direction="next">&#10095;</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-text">
+          <h3>Apresentando qualidade, tecnologia e inovação para o cuidado da saúde bucal.</h3>
+          <p>
+          Com o nosso compromisso em promover cuidados reais e garantir a longevidade da saúde bucal, valorizamos profundamente cada oportunidade de participar de ações que nos permitem apresentar
+          com transparência e excelência aquilo que desejamos para nossos clientes: qualidade, inovação e bem-estar em cada detalhe.
+          </p>
+          <ul class="carousel-list">
+            <li>Participação em congressos e feiras.</li>
+            <li>Ativações em PDVs com foco em experiência de marca.</li>
+            <li>Momentos com lideranças e parceiros estratégicos.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====== MODAL REPRESENTANTES ====== -->
+  <div class="representantes-backdrop" id="representantesModal">
+    <div class="representantes-modal" role="dialog" aria-modal="true" aria-labelledby="representantesTitle">
+      <div class="representantes-header">
+        <div>
+          <h2 id="representantesTitle">Encontre o representante da sua região</h2>
+          <p>
+            Selecione o estado em que você está localizado para visualizar as regiões atendidas e,
+            em seguida, escolha a região (Norte, Sul, Leste, Oeste ou Centro) para ver os representantes que
+            atuam na sua área.
+          </p>
+        </div>
+        <button class="representantes-close" id="closeRepresentantesModal">Fechar</button>
+      </div>
+
+      <div class="representantes-body">
+        <div class="representantes-map">
+          <div class="representantes-map-title">Mapa do Brasil (clique no estado)</div>
+          <div class="br-map" id="brMap">
+
+            <button data-uf="SP">SP<span>São Paulo</span></button>
+            <button data-uf="MG">MG<span>Minas Gerais</span></button>
+            <button data-uf="RJ">RJ<span>Rio de Janeiro</span></button>
+            <button data-uf="PR">PR<span>Paraná</span></button>
+            <button data-uf="RS">RS<span>Rio Grande do Sul</span></button>
+            <button data-uf="BR">BR<span>Outros estados</span></button>
+
+
+
+          </div>
+        </div>
+
+        <div class="representantes-list">
+          <div class="representantes-list-header">
+            <span>Representantes</span>
+            <h3 id="representantesEstadoTitulo">Selecione um estado no mapa</h3>
+          </div>
+          <div id="representantesListaConteudo">
+            <div class="representantes-empty">
+              Escolha primeiro um estado no mapa ao lado para visualizar as regiões e, depois, os representantes da sua área.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Edel White Brasil &copy; <span id="year"></span> • Relacionamento &amp; presença no mercado odontológico.
+  </footer>
+
+  <script>
+    // ====== CONFIG: URL do Google Forms para "Palestras" ======
+    const palestrasFormUrl = "https://forms.gle/SEU_FORMULARIO_AQUI";
+
+    // ====== NAV: scroll suave + highlight link ativo ======
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    function setActiveLink() {
+      const scrollY = window.scrollY;
+      navLinks.forEach(link => {
+        const section = document.querySelector(link.getAttribute('href'));
+        if (!section) return;
+        const sectionTop = section.offsetTop - 120;
+        const sectionBottom = sectionTop + section.offsetHeight;
+
+        if (scrollY >= sectionTop && scrollY < sectionBottom) {
+          navLinks.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', setActiveLink);
+
+    // ====== MENU MOBILE ======
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinksContainer = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      navLinksContainer.classList.toggle('open');
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinksContainer.classList.remove('open');
+      });
+    });
+
+    // ====== ANIMAÇÃO DE ENTRADA ======
+    const fadeElements = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    fadeElements.forEach(el => observer.observe(el));
+
+    // ====== CARROSSEL (genérico) ======
+    document.querySelectorAll('.carousel-container').forEach(container => {
+      const images = container.querySelectorAll('.carousel-image');
+      const dotsContainer = container.querySelector('.carousel-dots');
+      const prevBtn = container.querySelector('.carousel-btn[data-direction="prev"]');
+      const nextBtn = container.querySelector('.carousel-btn[data-direction="next"]');
+
+      if (!images.length || !dotsContainer || !prevBtn || !nextBtn) return;
+
+      let currentIndex = 0;
+      let intervalId;
+
+      function createDots() {
+        images.forEach((_, index) => {
+          const dot = document.createElement('button');
+          dot.classList.add('carousel-dot');
+          if (index === 0) dot.classList.add('active');
+          dot.addEventListener('click', () => goToSlide(index));
+          dotsContainer.appendChild(dot);
+        });
+      }
+
+      function updateSlides() {
+        images.forEach((img, i) => {
+          img.classList.toggle('active', i === currentIndex);
+        });
+        const dots = dotsContainer.querySelectorAll('.carousel-dot');
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === currentIndex);
+        });
+      }
+
+      function goToSlide(index) {
+        currentIndex = (index + images.length) % images.length;
+        updateSlides();
+        restartAutoPlay();
+      }
+
+      function nextSlide() {
+        goToSlide(currentIndex + 1);
+      }
+
+      function prevSlide() {
+        goToSlide(currentIndex - 1);
+      }
+
+      function startAutoPlay() {
+        intervalId = setInterval(nextSlide, 7000);
+      }
+
+      function stopAutoPlay() {
+        clearInterval(intervalId);
+      }
+
+      function restartAutoPlay() {
+        stopAutoPlay();
+        startAutoPlay();
+      }
+
+      createDots();
+      updateSlides();
+      startAutoPlay();
+
+      nextBtn.addEventListener('click', nextSlide);
+      prevBtn.addEventListener('click', prevSlide);
+
+      container.addEventListener('mouseenter', stopAutoPlay);
+      container.addEventListener('mouseleave', startAutoPlay);
+    });
+
+    // ====== COPIAR CUPONS ======
+    const copyButtons = document.querySelectorAll('.btn-copy');
+
+    copyButtons.forEach(button => {
+      button.addEventListener('click', async () => {
+        const code = button.dataset.coupon || button.closest('.coupon-card').querySelector('.coupon-code').dataset.coupon;
+        try {
+          await navigator.clipboard.writeText(code);
+          const originalText = button.textContent;
+          button.textContent = 'Copiado!';
+          setTimeout(() => (button.textContent = originalText), 1500);
+        } catch (err) {
+          alert('Não foi possível copiar o cupom automaticamente. Código: ' + code);
+        }
+      });
+    });
+
+    // ====== ANO NO FOOTER ======
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ====== BOTÕES "PALESTRAS" ======
+    document.querySelectorAll('.btn-palestras').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (!palestrasFormUrl || palestrasFormUrl.includes("SEU_FORMULARIO_AQUI")) {
+          alert("Defina a URL do formulário de palestras em 'palestrasFormUrl' no código.");
+          return;
+        }
+        window.open(palestrasFormUrl, '_blank');
+      });
+    });
+
+    // ====== MODAL REPRESENTANTES ======
+    const representantesModal = document.getElementById('representantesModal');
+    const closeRepresentantesModal = document.getElementById('closeRepresentantesModal');
+    const btnRepresentantes = document.querySelectorAll('.btn-representante');
+    const brMap = document.getElementById('brMap');
+    const representantesEstadoTitulo = document.getElementById('representantesEstadoTitulo');
+    const representantesListaConteudo = document.getElementById('representantesListaConteudo');
+
+    let estadoSelecionado = null;
+
+    const representantesPorEstado = {
+      "SP": {
+        nome: "São Paulo",
+        regioes: {
+          "Norte": [
+            { nome: "Jenni Fontes", telefone: "(11) 99734-0879", email: "jeni.fontes@edel-white.com" },
+          ],
+          "Sul": [
+            { nome: "Luciano Viana", telefone: "(11) 94730-0234", email: "luciano.viana@edel-white.com", whatsapp: "11947300234"},,
+            { nome: "Luiz Gustavo Macedo", telefone: "(11) 94749-8163", email: "luiz.macedo@edel-white.com", whatsapp: "11947498163"}
+          ],
+          "Leste": [
+            { nome: "Daniel Rutkoski", telefone: "(11) 97687-7504", email: "daniel.santos@edelw-hite.com" }
+          ],
+          "Oeste": [
+            { nome: "Jenni Fontes", telefone: "(11) 99999-0001", email: "jeni.viana@edel-white.com" },
+            { nome: "Luiz Gustavo Macedo", telefone: "(11) 94749-8163", email: "luiz.macedo@edel-white.com", whatsapp: "11947498163"}
+          ],
+          "Centro": [
+            { nome: "Jenni Fontes", telefone: "(11) 99734-0879", email: "jeni.fontes@edel-white.com", whatsapp: "11997340879" },
+            { nome: "Luciano Viana", telefone: "(11) 94730-0234", email: "luciano.viana@edel-white.com", whatsapp: "11947300234"},
+            { nome: "Luiz Gustavo Macedo", telefone: "(11) 94749-8163", email: "luiz.macedo@edel-white.com", whatsapp: "11947498163"}
+          ],
+
+          "Grande ABC":[
+          { nome: "Luiz Gustavo Macedo", telefone: "(11) 94749-8163", email: "luiz.macedo@edel-white.com", whatsapp: "11947498163"}
+          ],
+
+          "Outras regioes":[
+             { nome: "Luiz Gustavo Macedo", telefone: "(11) 94749-8163", email: "luiz.macedo@edel-white.com", whatsapp: "11947498163"},
+             { nome: "Jenni Fontes", telefone: "(11) 99734-0879", email: "jeni.fontes@edel-white.com", whatsapp: "11997340879" },
+             { nome: "Luciano Viana", telefone: "(11) 94730-0234", email: "luciano.viana@edel-white.com", whatsapp: "11947300234"},,
+             { nome: "Daniel Rutkoski", telefone: "(11) 97687-7504", email: "daniel.santos@edel-white.com", whatsapp:"1197877504"}
+          ]
+        }
+      },
+      "RJ": {
+        nome: "Rio de Janeiro",
+        regioes: {
+          "Todas as regiões": [
+            { nome: "Rose Correa", telefone: "(21) 96488-2040", email: "rose.correa@edel-white.com", whatsapp:"21964882040" }
+          ],
+        }
+      },
+      "MG": {
+        nome: "Belo Horizonte",
+        regioes: {
+          "Todas as regiões": [
+            { nome: "Gilberto Rodrigues", telefone: "(31) 97777-1001", whatsapp:"31977771001"}
+          ],
+
+        }
+      },
+    "PR": {
+        nome: "Curitiba",
+        regioes: {
+          "Todas as regiões": [
+            { nome: "Paula Cervello", telefone: "(41) 97400-8678", whatsapp:"41974008678"}
+          ],
+
+        }
+      },
+
+       "RS": {
+        nome: "Rio Grande do Sul",
+        regioes: {
+          "Todas as regiões": [
+            { nome: "Fabiano Fritsch", telefone: "(51) 97400-2665", email: "fabiano.fritsch@edel-white.com", whatsapp:"5197400-2665"}
+          ]
+
+        }
+      },
+
+         "BR": {
+        nome: "Outros estados",
+        regioes: {
+          "Todas as regiões": [
+            { nome: "Luciano Viana", telefone: "(11) 94730-0234", email: "luciano.viana@edel-white.com", whatsapp:"11947300234"}
+          ]
+
+        }
+      }
+
+
+
+    };
+
+    function abrirModalRepresentantes() {
+      representantesModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function fecharModalRepresentantes() {
+      representantesModal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function mostrarRegioes(estado) {
+      representantesListaConteudo.innerHTML = "";
+
+      const div = document.createElement("div");
+      div.className = "representantes-regioes";
+      div.innerHTML = `
+        <span style="color:#9ea3b0; font-size:.8rem;">Selecione a região:</span>
+        <div class="regioes-grid">
+          ${Object.keys(estado.regioes).map(r => `
+            <button class="btn-regiao" data-regiao="${r}">${r}</button>
+          `).join("")}
+        </div>
+      `;
+      representantesListaConteudo.appendChild(div);
+
+      document.querySelectorAll(".btn-regiao").forEach(btn => {
+        btn.addEventListener("click", () => selecionarRegiao(btn.dataset.regiao));
+      });
+    }
+
+    function selecionarEstado(uf) {
+      estadoSelecionado = uf;
+      const estado = representantesPorEstado[uf];
+
+      const nomeEstado = estado ? estado.nome : (uf || "Estado não cadastrado");
+      representantesEstadoTitulo.textContent = `Estado selecionado: ${nomeEstado}`;
+
+      brMap.querySelectorAll('button').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.uf === uf);
+      });
+
+      if (!estado) {
+        representantesListaConteudo.innerHTML = `
+          <div class="representantes-empty">
+            Em breve os dados de representantes deste estado serão adicionados. 
+            Entre em contato com a equipe central para suporte.
+          </div>
+        `;
+        return;
+      }
+
+      mostrarRegioes(estado);
+    }
+
+    function selecionarRegiao(nomeRegiao) {
+      const estado = representantesPorEstado[estadoSelecionado];
+      if (!estado) return;
+
+      const lista = estado.regioes[nomeRegiao] || [];
+
+      representantesListaConteudo.innerHTML = `
+        <span style="color:#9ea3b0; font-size:.8rem;">Região selecionada:</span>
+        <h3 style="margin-bottom:.6rem;">${nomeRegiao}</h3>
+      `;
+
+      if (!lista.length) {
+        representantesListaConteudo.innerHTML += `
+          <div class="representantes-empty">
+            Ainda não há representantes cadastrados nesta região.
+          </div>
+        `;
+        return;
+      }
+
+   lista.forEach(rep => {
+  const card = document.createElement("div");
+  card.className = "representante-card";
+
+  // Usa rep.whatsapp se existir, senão limpa o telefone
+  const digits = (rep.whatsapp || rep.telefone || "").replace(/\D/g, "");
+  const waNumber = digits.startsWith("55") ? digits : `55${digits}`;
+  const waLink = `https://wa.me/${waNumber}?text=Olá,%20gostaria%20de%20falar%20sobre%20Edel%20White`;
+
+  card.innerHTML = `
+    <strong>${rep.nome}</strong>
+    <div>Telefone: ${rep.telefone}</div>
+    <div>E-mail: ${rep.email}</div>
+    <a class="btn-whatsapp" href="${waLink}" target="_blank" rel="noopener noreferrer">
+      Conversar no WhatsApp
+    </a>
+  `;
+
+  representantesListaConteudo.appendChild(card);
+});
+
+    }
+
+    // EVENTOS MODAL
+    btnRepresentantes.forEach(btn => btn.addEventListener("click", abrirModalRepresentantes));
+    closeRepresentantesModal.addEventListener("click", fecharModalRepresentantes);
+
+    representantesModal.addEventListener("click", e => {
+      if (e.target === representantesModal) fecharModalRepresentantes();
+    });
+
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape" && representantesModal.classList.contains("open")) {
+        fecharModalRepresentantes();
+      }
+    });
+
+    brMap.addEventListener("click", e => {
+      const btn = e.target.closest("button[data-uf]");
+      if (btn) selecionarEstado(btn.dataset.uf);
+    });
+  </script>
+</body>
+</html>
