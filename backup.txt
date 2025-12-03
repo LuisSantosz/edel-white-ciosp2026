@@ -234,103 +234,20 @@
       align-items: center;
     }
 
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.7rem;
-  padding: 0.4rem 1.4rem;
-  border-radius: 999px;
-  background: radial-gradient(circle at 20% 0, rgba(255,255,255,0.16), transparent 60%),
-              linear-gradient(120deg, rgba(255,255,255,0.04), rgba(0,0,0,0.7));
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 0 18px rgba(0,0,0,0.8);
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: var(--brand-gray);
-  margin-bottom: 1.8rem;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Texto em “diamante” com fogo */
-.hero-badge-label {
-  font-weight: 700;
-  /* gradiente com cores frias + quentes para parecer diamante com fogo */
-  background-image:
-    linear-gradient(
-      120deg,
-      #ffffff,
-      #d0f1ff,
-      #9ad0ff,
-      #ffb3ec,
-      #ffe082,
-      #ffffff
-    );
-  background-size: 220% 220%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-shadow:
-    0 0 6px rgba(255,255,255,0.7),
-    0 0 16px rgba(255,255,255,0.9),
-    0 0 28px rgba(255,120,0,0.65),
-    0 0 40px rgba(255,40,0,0.55);
-  animation:
-    diamondFire 7s linear infinite,
-    diamondPulse 2.6s ease-in-out infinite;
-  white-space: nowrap;
-}
-
-/* Linha de brilho passando pelo texto */
-.hero-badge-label::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(
-    120deg,
-    transparent 0%,
-    rgba(255,255,255,0.9) 45%,
-    transparent 60%
-  );
-  mix-blend-mode: screen;
-  transform: translateX(-120%);
-  animation: diamondShine 4s ease-in-out infinite;
-}
-
-/* ANIMAÇÕES */
-
-@keyframes diamondFire {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-@keyframes diamondPulse {
-  0%, 100% {
-    text-shadow:
-      0 0 4px  rgba(255,255,255,0.7),
-      0 0 14px rgba(255,255,255,0.9),
-      0 0 26px rgba(255,120,0,0.65),
-      0 0 40px rgba(255,40,0,0.55);
-  }
-  50% {
-    text-shadow:
-      0 0 6px  rgba(255,255,255,0.9),
-      0 0 18px rgba(160,230,255,0.9),
-      0 0 32px rgba(255,190,120,0.8),
-      0 0 52px rgba(255,90,0,0.8);
-  }
-}
-
-@keyframes diamondShine {
-  0%   { transform: translateX(-130%) skewX(-20deg); opacity: 0; }
-  20%  { opacity: 1; }
-  50%  { transform: translateX(120%) skewX(-20deg); opacity: 0; }
-  100% { opacity: 0; }
-}
-
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--brand-gray);
+      margin-bottom: 1.5rem;
+    }
 
     .hero-badge-dot {
       width: 7px;
@@ -700,7 +617,7 @@
       border: 1px solid rgba(255, 255, 255, 0.16);
     }
 
-    /* ====== LAYOUT CARROSSEL + TEXTO ====== */
+    /* ====== CARROSSEL ====== */
 
     .carousel-container {
       border-radius: var(--radius-lg);
@@ -712,6 +629,83 @@
       grid-template-columns: 3fr 2fr;
       gap: 1.4rem;
       align-items: center;
+    }
+
+    .carousel-main {
+      position: relative;
+      border-radius: 1.2rem;
+      overflow: hidden;
+      background: #050509;
+      min-height: 220px;
+    }
+
+    .carousel-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity var(--transition-medium), transform 6s ease-out;
+      opacity: 0;
+      transform: scale(1.03);
+    }
+
+    .carousel-main img.active {
+      opacity: 1;
+      transform: scale(1.0);
+    }
+
+    .carousel-nav {
+      position: absolute;
+      inset: auto 0 0 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.6rem 0.9rem;
+      background: linear-gradient(to top, rgba(5, 5, 9, 0.9), transparent);
+    }
+
+    .carousel-dots {
+      display: flex;
+      gap: 0.35rem;
+    }
+
+    .carousel-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      background: transparent;
+      cursor: pointer;
+      opacity: 0.6;
+    }
+
+    .carousel-dot.active {
+      opacity: 1;
+      background: #ffffff;
+    }
+
+    .carousel-buttons {
+      display: flex;
+      gap: 0.4rem;
+    }
+
+    .carousel-btn {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      background: rgba(5, 5, 9, 0.8);
+      color: #ffffff;
+      font-size: 0.7rem;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      transition: background var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .carousel-btn:hover {
+      background: #ffffff;
+      color: #000000;
+      transform: translateY(-1px);
     }
 
     .carousel-text {
@@ -737,93 +731,6 @@
       content: "•";
       margin-right: 0.4rem;
       color: var(--brand-red);
-    }
-
-    /* ===== CARROSSEL PREMIUM (IMAGEM ÚNICA) ===== */
-
-    .carousel-premium {
-      position: relative;
-      width: 100%;
-      height: 330px;
-      background: #0c0e14;
-      border-radius: 1.2rem;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.45);
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .carousel-premium .carousel-track {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
-
-    .carousel-premium .carousel-track img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0;
-      transform: scale(1.05);
-      transition: opacity 0.8s ease, transform 8s ease;
-    }
-
-    .carousel-premium .carousel-track img.active {
-      opacity: 1;
-      transform: scale(1);
-    }
-
-    .carousel-premium .carousel-arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 46px;
-      height: 46px;
-      border: 2px solid var(--brand-red);
-      background: rgba(0,0,0,0.4);
-      backdrop-filter: blur(6px);
-      color: #fff;
-      font-size: 1.6rem;
-      border-radius: 0.9rem;
-      cursor: pointer;
-      display: grid;
-      place-items: center;
-      transition: 0.25s ease;
-      z-index: 10;
-    }
-
-    .carousel-premium .carousel-arrow:hover {
-      background: var(--brand-red);
-      transform: translateY(-50%) scale(1.05);
-      box-shadow: 0 0 12px rgba(249,66,58,0.7);
-    }
-
-    .carousel-premium .carousel-arrow.left { left: 18px; }
-    .carousel-premium .carousel-arrow.right { right: 18px; }
-
-    .carousel-premium .carousel-dots {
-      position: absolute;
-      bottom: 14px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 8px;
-    }
-
-    .carousel-premium .carousel-dots button {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.35);
-      border: none;
-      cursor: pointer;
-      transition: 0.25s ease;
-    }
-
-    .carousel-premium .carousel-dots button.active {
-      background: var(--brand-red);
-      box-shadow: 0 0 10px rgba(249,66,58,0.8);
-      transform: scale(1.25);
     }
 
     footer {
@@ -1067,145 +974,31 @@
     }
 
     .btn-whatsapp {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 0.6rem;
-      padding: 0.4rem 0.9rem;
-      border-radius: 999px;
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      border: none;
-      cursor: pointer;
-      background: linear-gradient(135deg, #25D366, #128C7E);
-      color: #ffffff;
-      text-decoration: none;
-      box-shadow: 0 10px 20px rgba(18, 140, 126, 0.4);
-      transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
-    }
-
-    .btn-whatsapp:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 14px 28px rgba(18, 140, 126, 0.55);
-      opacity: 0.95;
-    }
-
-    /* ================================
-   TEXTO CRISTAL TRANSLÚCIDO PREMIUM
-   ================================ */
-.ciosp-crystal {
-  position: relative;
-  display: inline-block;
-
-  font-size: 3rem;               
-  font-weight: 900;
-  letter-spacing: 0.28em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.6rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
   text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: #ffffff;
+  text-decoration: none;
+  box-shadow: 0 10px 20px rgba(18, 140, 126, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
 
-  /* Efeito cristal: mistura de transparência + brilho */
-  color: transparent;
-  background: 
-    linear-gradient(
-      135deg,
-      rgba(255,255,255,0.95) 0%,
-      rgba(255,255,255,0.55) 20%,
-      rgba(200,200,255,0.35) 40%,
-      rgba(255,255,255,0.85) 60%,
-      rgba(150,180,255,0.45) 80%,
-      rgba(255,255,255,1) 100%
-    );
-  background-size: 250% 250%;
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  /* borda transparente como vidro */
-  -webkit-text-stroke: 1.2px rgba(255,255,255,0.5);
-
-  /* brilho ao redor */
-  text-shadow:
-    0 0 10px rgba(255,255,255,0.4),
-    0 0 22px rgba(180,200,255,0.35),
-    0 0 40px rgba(255,255,255,0.25);
-
-  animation:
-    crystalReflex 6s ease-in-out infinite,
-    crystalPulse 3.5s infinite ease-in-out;
+.btn-whatsapp:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(18, 140, 126, 0.55);
+  opacity: 0.95;
 }
 
 
-/* Reflexo “passando dentro do cristal” */
-@keyframes crystalReflex {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-
-/* Pulso sutil do brilho cristalizado */
-@keyframes crystalPulse {
-  0%, 100% {
-    text-shadow:
-      0 0 8px rgba(255,255,255,0.6),
-      0 0 18px rgba(200,220,255,0.5),
-      0 0 32px rgba(150,180,255,0.4);
-  }
-  50% {
-    text-shadow:
-      0 0 14px rgba(255,255,255,0.9),
-      0 0 32px rgba(210,230,255,0.7),
-      0 0 52px rgba(200,220,255,0.65);
-  }
-}
-
-
-/* ================================
-   BRILHOS CRISTALINOS FLUTUANDO
-   ================================ */
-.ciosp-crystal::after {
-  content: "";
-  position: absolute;
-  inset: -20px;
-  pointer-events: none;
-
-  background:
-    radial-gradient(circle, rgba(255,255,255,0.95) 0%, transparent 55%) 20% 30% / 6px 6px,
-    radial-gradient(circle, rgba(255,255,255,0.85) 0%, transparent 55%) 65% 25% / 4px 4px,
-    radial-gradient(circle, rgba(255,255,255,0.9) 0%, transparent 60%) 50% 70% / 5px 5px,
-    radial-gradient(circle, rgba(255,255,255,0.75) 0%, transparent 60%) 80% 60% / 3px 3px;
-
-  background-repeat: no-repeat;
-
-  animation: crystalParticles 7s infinite ease-in-out alternate;
-  opacity: 0.9;
-}
-
-
-/* Movimento suave das partículas brilhantes */
-@keyframes crystalParticles {
-  0% {
-    background-position:
-      20% 32%,
-      65% 28%,
-      48% 72%,
-      78% 58%;
-  }
-  50% {
-    background-position:
-      24% 28%,
-      62% 32%,
-      52% 76%,
-      82% 63%;
-  }
-  100% {
-    background-position:
-      18% 36%,
-      72% 24%,
-      46% 68%,
-      75% 55%;
-  }
-
-}
     /* ====== RESPONSIVO ====== */
 
     @media (max-width: 960px) {
@@ -1308,21 +1101,17 @@
     <!-- ====== HERO ====== -->
     <section id="inicio" class="fade-in">
       <div class="hero-copy">
-      <div class="hero-badge">
-
-
-  <!-- NOVO TEXTO EM "DIAMANTE" -->
-  <div class="ciosp-crystal">CIOSP 2026</div>
-
-</div>
-
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Presença Edel White no mercado
+        </div>
         <h1 class="hero-title">
           <br/>
           A <span>Suiça</span> no Brasil.
         </h1>
         <p class="hero-text">
           A Edel White consolida-se como parceira estratégica de consultórios, clínicas e redes de varejo odontológico. 
-          Mais do que produtos, entregamos experiência, confiança e uma jornada de longevidade com os pacientes.
+          Mais do que produtos, entregamos experiência, confiança e uma jornada de LONGEVIDADE com os pacientes.
         </p>
       </div>
 
@@ -1348,9 +1137,9 @@
                 educação do profissional e presença qualificada no ponto de venda.
               </p>
               <div class="hero-visual-badges">
-                <span>Programa de treinamento</span>
+                <span>Porgrama de treinamento</span>
                 <span>Relacionamento com distribuidoras</span>
-                <span>Cuidado com o cliente</span>
+                <span>Cuidado com cliente</span>
                 <span>Ativo em eventos e ações</span>
               </div>
             </div>
@@ -1362,8 +1151,8 @@
               </div>
               <div class="hero-visual-metric">
                 <span>Horário &amp; data</span>
-                <strong>28–30/01: 10h às 20h</strong>
-                <strong>31/01: 10h às 18h</strong>
+                <strong>28-30/01: 10h as 20h</strong>
+                <strong>31/01: 10h as 18h</strong>
               </div>
               <div class="hero-visual-metric">
                 <span>Confiança</span>
@@ -1371,7 +1160,7 @@
               </div>
               <div class="hero-visual-metric">
                 <span>Foco</span>
-                <strong>Qualidade e longevidade</strong>
+                <strong>Qualidade e Longevidade</strong>
               </div>
             </div>
           </div>
@@ -1393,15 +1182,19 @@
       </div>
 
       <div class="carousel-container">
-        <div class="carousel-premium">
-          <div class="carousel-track">
-            <img src="img/edel 4.jpg" class="active" alt="Testes de qualidade" />
-            <img src="img/edel 3.jpg" alt="Profissional ensinando paciente a usar escova sonic" />
-            <img src="img/edel kids 3.jpg" alt="Profissional utilizando escova Edel White Kids para escovar a boca de uma criança" />
+        <div class="carousel-main">
+          <!-- Substitua os src pelas suas imagens reais -->
+          <img src="img/edel 4.jpg" class="carousel-image active" alt="Testes de qualidade" />
+          <img src="img/edel 3.jpg" class="carousel-image" alt="Profissional ensinado paciente a usar escova sonic" />
+          <img src="img/edel kids 3.jpg" class="carousel-image" alt="Profissional utilizando escova Edel White Kids para escovar a boca de uma criança " />
+
+          <div class="carousel-nav">
+            <div class="carousel-dots"></div>
+            <div class="carousel-buttons">
+              <button class="carousel-btn" data-direction="prev">&#10094;</button>
+              <button class="carousel-btn" data-direction="next">&#10095;</button>
+            </div>
           </div>
-          <button class="carousel-arrow left">&#10094;</button>
-          <button class="carousel-arrow right">&#10095;</button>
-          <div class="carousel-dots"></div>
         </div>
 
         <div class="carousel-text">
@@ -1429,21 +1222,21 @@
         </div>
         <p class="section-subtitle">
           Nossos destaques no mercado vão muito além de produtos — entregamos experiências premium.
-          Cada item da Edel White é desenvolvido para transmitir sofisticação, tecnologia e excelência em cuidados bucais. 
-          Nossa linha combina design moderno, performance superior e uma sensação de qualidade que o consumidor percebe no primeiro uso.
+        Cada item da Edel White é desenvolvido para transmitir sofisticação, tecnologia e excelência em cuidados bucais. 
+        Nossa linha combina design moderno, performance superior e uma sensação de qualidade que o consumidor percebe no primeiro uso.
         </p>
       </div>
 
       <div class="products-grid">
         <article class="product-card">
           <div class="product-tag">Escovas Premium</div>
-          <h3 class="product-name">ESCOVA DE DENTES FLOSSERBRUSH ULTRASOFT</h3>
+          <h3 class="product-name">EESCOVA DE DENTES FLOSSERBRUSH ULTRASOFT</h3>
           <p class="product-desc">
             Cerdas ultrafinas e delicadas, indicadas para pacientes com sensibilidade gengival e pós-procedimentos.
           </p>
           <div class="product-meta">
             <span>Principal canal: <strong>Consultórios &amp; distribuidores</strong></span>
-            <span class="product-pill">DESTAQUE EM INDICAÇÃO PROFISSIONAL</span>
+            <span class="product-pill">DESTAQUE EM INDICAÇÃO PROFSSIONAL</span>
           </div>
         </article>
 
@@ -1455,19 +1248,19 @@
           </p>
           <div class="product-meta">
             <span>Foco: <strong>Rotina diária do paciente</strong></span>
-            <span class="product-pill">ESPUMA CONTROLADA • FLÚOR BIODISPONÍVEL</span>
+            <span class="product-pill">ESPUMA CONTROLADA - FLUOR BIODISPONIVEL</span>
           </div>
         </article>
 
         <article class="product-card">
           <div class="product-tag">Soluções específicas</div>
-          <h3 class="product-name">ANTISSÉPTICO BUCAL FRESH + PROTECT</h3>
+          <h3 class="product-name">ANTISSEPTICO BUCAL FRESH + PROTECT</h3>
           <p class="product-desc">
             Linha voltada para potencializar tratamentos e oferecer uma experiência completa de cuidado bucal.
           </p>
           <div class="product-meta">
             <span>Estratégia: <strong>Cross-sell com escovas e cremes</strong></span>
-            <span class="product-pill">COMBATE NATURAL AO MAU HÁLITO</span>
+            <span class="product-pill">COMBATE NATURAL AO MAU HALITO</span>
           </div>
         </article>
       </div>
@@ -1481,7 +1274,7 @@
           <h2 class="section-title">Cupons.</h2>
         </div>
         <p class="section-subtitle">
-          Para nossos clientes, estamos disponibilizando cupons de desconto exclusivos para serem utilizados em campanhas, eventos e feiras. 
+          Para nossos clientes, estamos disponibilizando cupons de desconto exclusivos para serem utilizados em campanhas, eventos e feiras 
           Uma oportunidade perfeita para garantir suas compras com condições especiais e aproveitar benefícios únicos durante o evento.
         </p>
       </div>
@@ -1553,28 +1346,31 @@
           <h2 class="section-title">Momentos que reforçam a presença da Edel White.</h2>
         </div>
         <p class="section-subtitle">
-          Eventos, treinamentos, campanhas e congressos que fortalecem nosso relacionamento com o mercado.
+         Eventos, treinamentos, campanhas, congressos que fortalecem nosso relacionamento com o mercado
         </p>
       </div>
 
       <div class="carousel-container">
-        <div class="carousel-premium">
-          <div class="carousel-track">
-            <img src="img/edel ciosp.jpeg" class="active" alt="Evento com profissionais de odontologia" />
-            <img src="img/edel kids 1.jpg" alt="Apresentação de produtos para crianças" />
-            <img src="img/edel kids 2.jpg" alt="Ensinando crianças a fazerem higiene bucal" />
-            <img src="img/edel ciosp 1.jpg" alt="Estande Edel White em congresso" />
+        <div class="carousel-main">
+          <img src="img/edel ciosp.jpeg" class="carousel-image active" alt="Evento com profissionais de odontologia" />
+          <img src="img/edel kids 1.jpg" class="carousel-image" alt="Apresentação de produtos para crianças" />
+          <img src="img/edel kids 2.jpg" class="carousel-image" alt="Ensinando crianças a fazerem higiene bucal" />
+          <img src="img/edel ciosp 1.jpg" class="carousel-image" alt="Ensinando crianças a fazerem higiene bucal" />
+
+          <div class="carousel-nav">
+            <div class="carousel-dots"></div>
+            <div class="carousel-buttons">
+              <button class="carousel-btn" data-direction="prev">&#10094;</button>
+              <button class="carousel-btn" data-direction="next">&#10095;</button>
+            </div>
           </div>
-          <button class="carousel-arrow left">&#10094;</button>
-          <button class="carousel-arrow right">&#10095;</button>
-          <div class="carousel-dots"></div>
         </div>
 
         <div class="carousel-text">
           <h3>Apresentando qualidade, tecnologia e inovação para o cuidado da saúde bucal.</h3>
           <p>
-            Com o nosso compromisso em promover cuidados reais e garantir a longevidade da saúde bucal, valorizamos profundamente cada oportunidade de participar de ações que nos permitem apresentar,
-            com transparência e excelência, aquilo que desejamos para nossos clientes: qualidade, inovação e bem-estar em cada detalhe.
+          Com o nosso compromisso em promover cuidados reais e garantir a longevidade da saúde bucal, valorizamos profundamente cada oportunidade de participar de ações que nos permitem apresentar
+          com transparência e excelência aquilo que desejamos para nossos clientes: qualidade, inovação e bem-estar em cada detalhe.
           </p>
           <ul class="carousel-list">
             <li>Participação em congressos e feiras.</li>
@@ -1594,7 +1390,7 @@
           <h2 id="representantesTitle">Encontre o representante da sua região</h2>
           <p>
             Selecione o estado em que você está localizado para visualizar as regiões atendidas e,
-            em seguida, escolha a região (Norte, Sul, Leste, Oeste, Centro ou outras regiões) para ver os representantes que
+            em seguida, escolha a região (Norte, Sul, Leste, Oeste ou Centro) para ver os representantes que
             atuam na sua área.
           </p>
         </div>
@@ -1605,12 +1401,16 @@
         <div class="representantes-map">
           <div class="representantes-map-title">Mapa do Brasil (clique no estado)</div>
           <div class="br-map" id="brMap">
+
             <button data-uf="SP">SP<span>São Paulo</span></button>
             <button data-uf="MG">MG<span>Minas Gerais</span></button>
             <button data-uf="RJ">RJ<span>Rio de Janeiro</span></button>
             <button data-uf="PR">PR<span>Paraná</span></button>
             <button data-uf="RS">RS<span>Rio Grande do Sul</span></button>
             <button data-uf="BR">BR<span>Outros estados</span></button>
+
+
+
           </div>
         </div>
 
@@ -1688,73 +1488,74 @@
 
     fadeElements.forEach(el => observer.observe(el));
 
-    // ===== CARROSSEL PREMIUM (IMAGENS) =====
-    document.querySelectorAll(".carousel-premium").forEach(carousel => {
-      const imgs = carousel.querySelectorAll(".carousel-track img");
-      const next = carousel.querySelector(".carousel-arrow.right");
-      const prev = carousel.querySelector(".carousel-arrow.left");
-      const dotsContainer = carousel.querySelector(".carousel-dots");
+    // ====== CARROSSEL (genérico) ======
+    document.querySelectorAll('.carousel-container').forEach(container => {
+      const images = container.querySelectorAll('.carousel-image');
+      const dotsContainer = container.querySelector('.carousel-dots');
+      const prevBtn = container.querySelector('.carousel-btn[data-direction="prev"]');
+      const nextBtn = container.querySelector('.carousel-btn[data-direction="next"]');
 
-      if (!imgs.length || !next || !prev || !dotsContainer) return;
+      if (!images.length || !dotsContainer || !prevBtn || !nextBtn) return;
 
-      let index = 0;
-      let interval;
+      let currentIndex = 0;
+      let intervalId;
 
-      // Criar dots dinamicamente
-      imgs.forEach((_, i) => {
-        const dot = document.createElement("button");
-        if (i === 0) dot.classList.add("active");
-        dot.addEventListener("click", () => goTo(i));
-        dotsContainer.appendChild(dot);
-      });
+      function createDots() {
+        images.forEach((_, index) => {
+          const dot = document.createElement('button');
+          dot.classList.add('carousel-dot');
+          if (index === 0) dot.classList.add('active');
+          dot.addEventListener('click', () => goToSlide(index));
+          dotsContainer.appendChild(dot);
+        });
+      }
 
-      const dots = dotsContainer.querySelectorAll("button");
+      function updateSlides() {
+        images.forEach((img, i) => {
+          img.classList.toggle('active', i === currentIndex);
+        });
+        const dots = dotsContainer.querySelectorAll('.carousel-dot');
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === currentIndex);
+        });
+      }
 
-      function update() {
-        imgs.forEach((img, i) => img.classList.toggle("active", i === index));
-        dots.forEach((d, i) => d.classList.toggle("active", i === index));
+      function goToSlide(index) {
+        currentIndex = (index + images.length) % images.length;
+        updateSlides();
+        restartAutoPlay();
       }
 
       function nextSlide() {
-        index = (index + 1) % imgs.length;
-        update();
+        goToSlide(currentIndex + 1);
       }
 
       function prevSlide() {
-        index = (index - 1 + imgs.length) % imgs.length;
-        update();
-      }
-
-      function goTo(i) {
-        index = i;
-        update();
-        resetAutoPlay();
+        goToSlide(currentIndex - 1);
       }
 
       function startAutoPlay() {
-        interval = setInterval(nextSlide, 6000);
+        intervalId = setInterval(nextSlide, 7000);
       }
 
-      function resetAutoPlay() {
-        clearInterval(interval);
+      function stopAutoPlay() {
+        clearInterval(intervalId);
+      }
+
+      function restartAutoPlay() {
+        stopAutoPlay();
         startAutoPlay();
       }
 
-      next.addEventListener("click", () => {
-        nextSlide();
-        resetAutoPlay();
-      });
-
-      prev.addEventListener("click", () => {
-        prevSlide();
-        resetAutoPlay();
-      });
-
-      carousel.addEventListener("mouseenter", () => clearInterval(interval));
-      carousel.addEventListener("mouseleave", startAutoPlay);
-
-      update();
+      createDots();
+      updateSlides();
       startAutoPlay();
+
+      nextBtn.addEventListener('click', nextSlide);
+      prevBtn.addEventListener('click', prevSlide);
+
+      container.addEventListener('mouseenter', stopAutoPlay);
+      container.addEventListener('mouseleave', startAutoPlay);
     });
 
     // ====== COPIAR CUPONS ======
@@ -1803,32 +1604,34 @@
         nome: "São Paulo",
         regioes: {
           "Norte": [
-            { nome: "Jenni Fontes", telefone: "(11) 99734-0879", email: "jeni.fontes@edel-white.com", whatsapp: "11997340879" }
+            { nome: "Jenni Fontes", telefone: "(11) 99734-0879", email: "jeni.fontes@edel-white.com" },
           ],
           "Sul": [
-            { nome: "Luciano Viana", telefone: "(11) 94730-0234", email: "luciano.viana@edel-white.com", whatsapp: "11947300234" },
-            { nome: "Luiz Gustavo Macedo", telefone: "(11) 94749-8163", email: "luiz.macedo@edel-white.com", whatsapp: "11947498163" }
+            { nome: "Luciano Viana", telefone: "(11) 94730-0234", email: "luciano.viana@edel-white.com", whatsapp: "11947300234"},,
+            { nome: "Luiz Gustavo Macedo", telefone: "(11) 94749-8163", email: "luiz.macedo@edel-white.com", whatsapp: "11947498163"}
           ],
           "Leste": [
-            { nome: "Daniel Rutkoski", telefone: "(11) 97687-7504", email: "daniel.santos@edel-white.com", whatsapp: "11976877504" }
+            { nome: "Daniel Rutkoski", telefone: "(11) 97687-7504", email: "daniel.santos@edelw-hite.com" }
           ],
           "Oeste": [
-            { nome: "Jenni Fontes", telefone: "(11) 99734-0879", email: "jeni.viana@edel-white.com", whatsapp: "11997340879" },
-            { nome: "Luiz Gustavo Macedo", telefone: "(11) 94749-8163", email: "luiz.macedo@edel-white.com", whatsapp: "11947498163" }
+            { nome: "Jenni Fontes", telefone: "(11) 99999-0001", email: "jeni.viana@edel-white.com" },
+            { nome: "Luiz Gustavo Macedo", telefone: "(11) 94749-8163", email: "luiz.macedo@edel-white.com", whatsapp: "11947498163"}
           ],
           "Centro": [
             { nome: "Jenni Fontes", telefone: "(11) 99734-0879", email: "jeni.fontes@edel-white.com", whatsapp: "11997340879" },
-            { nome: "Luciano Viana", telefone: "(11) 94730-0234", email: "luciano.viana@edel-white.com", whatsapp: "11947300234" },
-            { nome: "Luiz Gustavo Macedo", telefone: "(11) 94749-8163", email: "luiz.macedo@edel-white.com", whatsapp: "11947498163" }
+            { nome: "Luciano Viana", telefone: "(11) 94730-0234", email: "luciano.viana@edel-white.com", whatsapp: "11947300234"},
+            { nome: "Luiz Gustavo Macedo", telefone: "(11) 94749-8163", email: "luiz.macedo@edel-white.com", whatsapp: "11947498163"}
           ],
-          "Grande ABC": [
-            { nome: "Luiz Gustavo Macedo", telefone: "(11) 94749-8163", email: "luiz.macedo@edel-white.com", whatsapp: "11947498163" }
+
+          "Grande ABC":[
+          { nome: "Luiz Gustavo Macedo", telefone: "(11) 94749-8163", email: "luiz.macedo@edel-white.com", whatsapp: "11947498163"}
           ],
-          "Outras regiões": [
-            { nome: "Luiz Gustavo Macedo", telefone: "(11) 94749-8163", email: "luiz.macedo@edel-white.com", whatsapp: "11947498163" },
-            { nome: "Jenni Fontes", telefone: "(11) 99734-0879", email: "jeni.fontes@edel-white.com", whatsapp: "11997340879" },
-            { nome: "Luciano Viana", telefone: "(11) 94730-0234", email: "luciano.viana@edel-white.com", whatsapp: "11947300234" },
-            { nome: "Daniel Rutkoski", telefone: "(11) 97687-7504", email: "daniel.santos@edel-white.com", whatsapp: "11976877504" }
+
+          "Outras regioes":[
+             { nome: "Luiz Gustavo Macedo", telefone: "(11) 94749-8163", email: "luiz.macedo@edel-white.com", whatsapp: "11947498163"},
+             { nome: "Jenni Fontes", telefone: "(11) 99734-0879", email: "jeni.fontes@edel-white.com", whatsapp: "11997340879" },
+             { nome: "Luciano Viana", telefone: "(11) 94730-0234", email: "luciano.viana@edel-white.com", whatsapp: "11947300234"},,
+             { nome: "Daniel Rutkoski", telefone: "(11) 97687-7504", email: "daniel.santos@edel-white.com", whatsapp:"1197877504"}
           ]
         }
       },
@@ -1837,41 +1640,50 @@
         regioes: {
           "Todas as regiões": [
             { nome: "Rose Correa", telefone: "(21) 96488-2040", email: "rose.correa@edel-white.com", whatsapp:"21964882040" }
-          ]
+          ],
         }
       },
       "MG": {
         nome: "Belo Horizonte",
         regioes: {
           "Todas as regiões": [
-            { nome: "Gilberto Rodrigues", telefone: "(31) 97777-1001", email: "gilberto.rodrigues@edel-white.com", whatsapp:"31977771001" }
-          ]
+            { nome: "Gilberto Rodrigues", telefone: "(31) 97777-1001", whatsapp:"31977771001"}
+          ],
+
         }
       },
-      "PR": {
+    "PR": {
         nome: "Curitiba",
         regioes: {
           "Todas as regiões": [
-            { nome: "Paula Cervello", telefone: "(41) 97400-8678", email: "paula.cervello@edel-white.com", whatsapp:"41974008678" }
-          ]
+            { nome: "Paula Cervello", telefone: "(41) 97400-8678", whatsapp:"41974008678"}
+          ],
+
         }
       },
-      "RS": {
+
+       "RS": {
         nome: "Rio Grande do Sul",
         regioes: {
           "Todas as regiões": [
-            { nome: "Fabiano Fritsch", telefone: "(51) 97400-2665", email: "fabiano.fritsch@edel-white.com", whatsapp:"51974002665" }
+            { nome: "Fabiano Fritsch", telefone: "(51) 97400-2665", email: "fabiano.fritsch@edel-white.com", whatsapp:"5197400-2665"}
           ]
+
         }
       },
-      "BR": {
+
+         "BR": {
         nome: "Outros estados",
         regioes: {
           "Todas as regiões": [
-            { nome: "Luciano Viana", telefone: "(11) 94730-0234", email: "luciano.viana@edel-white.com", whatsapp:"11947300234" }
+            { nome: "Luciano Viana", telefone: "(11) 94730-0234", email: "luciano.viana@edel-white.com", whatsapp:"11947300234"}
           ]
+
         }
       }
+
+
+
     };
 
     function abrirModalRepresentantes() {
@@ -1948,25 +1760,27 @@
         return;
       }
 
-      lista.forEach(rep => {
-        const card = document.createElement("div");
-        card.className = "representante-card";
+   lista.forEach(rep => {
+  const card = document.createElement("div");
+  card.className = "representante-card";
 
-        const digits = (rep.whatsapp || rep.telefone || "").replace(/\D/g, "");
-        const waNumber = digits.startsWith("55") ? digits : `55${digits}`;
-        const waLink = `https://wa.me/${waNumber}?text=Olá,%20gostaria%20de%20falar%20sobre%20Edel%20White`;
+  // Usa rep.whatsapp se existir, senão limpa o telefone
+  const digits = (rep.whatsapp || rep.telefone || "").replace(/\D/g, "");
+  const waNumber = digits.startsWith("55") ? digits : `55${digits}`;
+  const waLink = `https://wa.me/${waNumber}?text=Olá,%20gostaria%20de%20falar%20sobre%20Edel%20White`;
 
-        card.innerHTML = `
-          <strong>${rep.nome}</strong>
-          <div>Telefone: ${rep.telefone}</div>
-          ${rep.email ? `<div>E-mail: ${rep.email}</div>` : ""}
-          <a class="btn-whatsapp" href="${waLink}" target="_blank" rel="noopener noreferrer">
-            Conversar no WhatsApp
-          </a>
-        `;
+  card.innerHTML = `
+    <strong>${rep.nome}</strong>
+    <div>Telefone: ${rep.telefone}</div>
+    <div>E-mail: ${rep.email}</div>
+    <a class="btn-whatsapp" href="${waLink}" target="_blank" rel="noopener noreferrer">
+      Conversar no WhatsApp
+    </a>
+  `;
 
-        representantesListaConteudo.appendChild(card);
-      });
+  representantesListaConteudo.appendChild(card);
+});
+
     }
 
     // EVENTOS MODAL
