@@ -2,1166 +2,1117 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>Edel White Brasil – Relacionamento & Presença no Mercado</title>
+  <title>Edel White - CIOSP 2026</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Fonte sofisticada -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --brand-red: #F9423A;
-      --brand-dark: #050509;
-      --brand-dark-soft: #0b0d14;
-      --brand-light: #f8f9fb;
-      --brand-gray: #9ea3b0;
-      --radius-lg: 1.5rem;
-      --radius-md: 1rem;
-      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.3);
-      --shadow-card: 0 18px 40px rgba(0, 0, 0, 0.25);
-      --transition-fast: 0.25s ease;
-      --transition-medium: 0.4s ease;
-      scroll-behavior: smooth;
-    }
+ <style>
+  :root {
+    --brand-red: #F9423A;
+    --brand-dark: #050509;
+    --brand-dark-soft: #0b0d14;
+    --brand-light: #f8f9fb;
+    --brand-gray: #9ea3b0;
+    --radius-lg: 1.5rem;
+    --radius-md: 1rem;
+    --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.3);
+    --shadow-card: 0 18px 40px rgba(0, 0, 0, 0.25);
+    --transition-fast: 0.25s ease;
+    --transition-medium: 0.4s ease;
+    scroll-behavior: smooth;
+  }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-    body {
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: radial-gradient(circle at top, #181b24 0, #050509 55%);
-      color: #ffffff;
-      min-height: 100vh;
-      line-height: 1.5;
-    }
+  body {
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: radial-gradient(circle at top, #181b24 0, #050509 55%);
+    color: #ffffff;
+    min-height: 100vh;
+    line-height: 1.5;
+  }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
+  img {
+    max-width: 100%;
+    display: block;
+  }
 
-    /* ====== HEADER / NAVBAR ====== */
+  /* ====== HEADER / NAVBAR ====== */
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      backdrop-filter: blur(22px);
-      background: linear-gradient(to bottom, rgba(5, 5, 9, 0.92), rgba(5, 5, 9, 0.5), transparent);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    }
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    backdrop-filter: blur(22px);
+    background: linear-gradient(to bottom, rgba(5, 5, 9, 0.92), rgba(5, 5, 9, 0.5), transparent);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
 
-    .nav {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1.5rem;
-    }
+  .nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
 
-    .logo {
-      display: flex;
-      align-items: baseline;
-      gap: 0.25rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-size: 1rem;
-    }
+  .logo {
+    display: flex;
+    align-items: baseline;
+    gap: 0.25rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
 
-    .logo span {
-      color: var(--brand-red);
-    }
+  .logo span {
+    color: var(--brand-red);
+  }
 
-    .nav-links {
-      display: flex;
-      gap: 1.75rem;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      font-weight: 500;
-    }
+  .nav-links {
+    display: flex;
+    gap: 1.75rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: 500;
+  }
 
-    .nav-links a {
-      position: relative;
-      padding-bottom: 0.25rem;
-      opacity: 0.7;
-      transition: opacity var(--transition-fast), transform var(--transition-fast);
-    }
+  .nav-links a {
+    position: relative;
+    padding-bottom: 0.25rem;
+    opacity: 0.7;
+    transition: opacity var(--transition-fast), transform var(--transition-fast);
+  }
 
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      height: 2px;
-      width: 0;
-      background: linear-gradient(90deg, var(--brand-red), #ff4d5e);
-      border-radius: 999px;
-      transition: width var(--transition-fast);
-    }
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: linear-gradient(90deg, var(--brand-red), #ff4d5e);
+    border-radius: 999px;
+    transition: width var(--transition-fast);
+  }
 
-    .nav-links a:hover {
-      opacity: 1;
-      transform: translateY(-1px);
-    }
+  .nav-links a:hover {
+    opacity: 1;
+    transform: translateY(-1px);
+  }
 
-    .nav-links a.active::after {
-      width: 100%;
-    }
+  .nav-links a.active::after {
+    width: 100%;
+  }
 
-    .nav-cta {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
+  .nav-cta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
 
-    .btn {
-      border-radius: 999px;
-      border: none;
-      padding: 0.55rem 1.25rem;
-      font-size: 0.85rem;
-      cursor: pointer;
-      font-weight: 500;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast), color var(--transition-fast);
-    }
+  .btn {
+    border-radius: 999px;
+    border: none;
+    padding: 0.55rem 1.25rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast), color var(--transition-fast);
+  }
 
-    .btn-outline {
-      background: transparent;
-      color: #ffffff;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
+  .btn-outline {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
 
-    .btn-outline:hover {
-      border-color: rgba(255, 255, 255, 0.5);
-      transform: translateY(-1px);
-    }
+  .btn-outline:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-1px);
+  }
 
-    .btn-primary {
-      background: linear-gradient(135deg, var(--brand-red), #ff4d5e);
-      color: #ffffff;
-      box-shadow: 0 12px 30px rgba(249, 66, 58, 0.45);
-    }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--brand-red), #ff4d5e);
+    color: #ffffff;
+    box-shadow: 0 12px 30px rgba(249, 66, 58, 0.45);
+  }
 
-    .btn-primary:hover {
-      transform: translateY(-1px) scale(1.01);
-      box-shadow: 0 18px 40px rgba(249, 66, 58, 0.55);
-    }
+  .btn-primary:hover {
+    transform: translateY(-1px) scale(1.01);
+    box-shadow: 0 18px 40px rgba(249, 66, 58, 0.55);
+  }
 
-    .menu-toggle {
-      display: none;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 999px;
-      padding: 0.45rem 0.75rem;
-      background: rgba(5, 5, 9, 0.8);
-      cursor: pointer;
-      font-size: 0.7rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-    }
+  /* Botão de troca de tema */
+  .btn-theme-toggle {
+    border-radius: 999px;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+    white-space: nowrap;
+  }
 
-    /* ====== LAYOUT PRINCIPAL ====== */
+  .btn-theme-toggle:hover {
+    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.08);
+  }
 
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem 3.5rem;
-    }
+  .menu-toggle {
+    display: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+    padding: 0.45rem 0.75rem;
+    background: rgba(5, 5, 9, 0.8);
+    cursor: pointer;
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
 
-    section {
-      padding: 4rem 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-    }
+  /* ====== LAYOUT PRINCIPAL ====== */
 
-    section:last-of-type {
-      border-bottom: none;
-    }
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 3.5rem;
+  }
 
-    .section-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 1.5rem;
-      margin-bottom: 2.5rem;
-    }
+  section {
+    padding: 4rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  }
 
-    .section-title-wrap {
-      max-width: 480px;
-    }
+  section:last-of-type {
+    border-bottom: none;
+  }
 
-    .section-eyebrow {
-      text-transform: uppercase;
-      font-size: 0.75rem;
-      letter-spacing: 0.16em;
-      color: var(--brand-gray);
-      margin-bottom: 0.35rem;
-    }
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
 
-    .section-title {
-      font-size: 1.8rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-    }
+  .section-title-wrap {
+    max-width: 480px;
+  }
 
-    .section-subtitle {
-      font-size: 0.9rem;
-      color: var(--brand-gray);
-      max-width: 480px;
-    }
+  .section-eyebrow {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.16em;
+    color: var(--brand-gray);
+    margin-bottom: 0.35rem;
+  }
 
-    /* ====== HERO ====== */
+  .section-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
 
-    #inicio {
-      padding-top: 3.5rem;
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.7fr);
-      gap: 2.75rem;
-      align-items: center;
-    }
+  .section-subtitle {
+    font-size: 0.9rem;
+    color: var(--brand-gray);
+    max-width: 480px;
+  }
 
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.7rem;
-  padding: 0.4rem 1.4rem;
-  border-radius: 999px;
-  background: radial-gradient(circle at 20% 0, rgba(255,255,255,0.16), transparent 60%),
-              linear-gradient(120deg, rgba(255,255,255,0.04), rgba(0,0,0,0.7));
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 0 18px rgba(0,0,0,0.8);
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: var(--brand-gray);
-  margin-bottom: 1.8rem;
-  position: relative;
-  overflow: hidden;
-}
+  /* ====== HERO ====== */
 
-/* Texto em “diamante” com fogo */
-.hero-badge-label {
-  font-weight: 700;
-  /* gradiente com cores frias + quentes para parecer diamante com fogo */
-  background-image:
-    linear-gradient(
-      120deg,
-      #ffffff,
-      #d0f1ff,
-      #9ad0ff,
-      #ffb3ec,
-      #ffe082,
-      #ffffff
-    );
-  background-size: 220% 220%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-shadow:
-    0 0 6px rgba(255,255,255,0.7),
-    0 0 16px rgba(255,255,255,0.9),
-    0 0 28px rgba(255,120,0,0.65),
-    0 0 40px rgba(255,40,0,0.55);
-  animation:
-    diamondFire 7s linear infinite,
-    diamondPulse 2.6s ease-in-out infinite;
-  white-space: nowrap;
-}
+  #inicio {
+    padding-top: 3.5rem;
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2.7fr);
+    gap: 2.75rem;
+    align-items: center;
+  }
 
-/* Linha de brilho passando pelo texto */
-.hero-badge-label::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(
-    120deg,
-    transparent 0%,
-    rgba(255,255,255,0.9) 45%,
-    transparent 60%
-  );
-  mix-blend-mode: screen;
-  transform: translateX(-120%);
-  animation: diamondShine 4s ease-in-out infinite;
-}
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.4rem 1.4rem;
+    border-radius: 999px;
+    background: radial-gradient(circle at 20% 0, rgba(255,255,255,0.16), transparent 60%),
+                linear-gradient(120deg, rgba(255,255,255,0.04), rgba(0,0,0,0.7));
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 0 18px rgba(0,0,0,0.8);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--brand-gray);
+    margin-bottom: 1.8rem;
+    position: relative;
+    overflow: hidden;
+  }
 
-/* ANIMAÇÕES */
-
-@keyframes diamondFire {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-@keyframes diamondPulse {
-  0%, 100% {
+  /* Texto em “diamante” com fogo */
+  .hero-badge-label {
+    font-weight: 700;
+    background-image:
+      linear-gradient(
+        120deg,
+        #ffffff,
+        #d0f1ff,
+        #9ad0ff,
+        #ffb3ec,
+        #ffe082,
+        #ffffff
+      );
+    background-size: 220% 220%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     text-shadow:
-      0 0 4px  rgba(255,255,255,0.7),
-      0 0 14px rgba(255,255,255,0.9),
-      0 0 26px rgba(255,120,0,0.65),
+      0 0 6px rgba(255,255,255,0.7),
+      0 0 16px rgba(255,255,255,0.9),
+      0 0 28px rgba(255,120,0,0.65),
       0 0 40px rgba(255,40,0,0.55);
+    animation:
+      diamondFire 7s linear infinite,
+      diamondPulse 2.6s ease-in-out infinite;
+    white-space: nowrap;
+    position: relative;
   }
-  50% {
-    text-shadow:
-      0 0 6px  rgba(255,255,255,0.9),
-      0 0 18px rgba(160,230,255,0.9),
-      0 0 32px rgba(255,190,120,0.8),
-      0 0 52px rgba(255,90,0,0.8);
+
+  .hero-badge-label::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+      120deg,
+      transparent 0%,
+      rgba(255,255,255,0.9) 45%,
+      transparent 60%
+    );
+    mix-blend-mode: screen;
+    transform: translateX(-120%);
+    animation: diamondShine 4s ease-in-out infinite;
   }
-}
-
-@keyframes diamondShine {
-  0%   { transform: translateX(-130%) skewX(-20deg); opacity: 0; }
-  20%  { opacity: 1; }
-  50%  { transform: translateX(120%) skewX(-20deg); opacity: 0; }
-  100% { opacity: 0; }
-}
-
-
-    .hero-badge-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 30% 30%, #fff, var(--brand-red));
-      box-shadow: 0 0 15px rgba(255, 69, 90, 0.7);
-    }
-
-    .hero-title {
-      font-size: clamp(2.2rem, 3vw + 1.2rem, 3.2rem);
-      line-height: 1.05;
-      margin-bottom: 1.1rem;
-    }
-
-    .hero-title span {
-      color: var(--brand-red);
-    }
-
-    .hero-text {
-      font-size: 0.95rem;
-      color: var(--brand-gray);
-      max-width: 480px;
-      margin-bottom: 0;
-    }
-
-    .hero-visual {
-      position: relative;
-      padding: 1.5rem;
-      border-radius: 2rem;
-      background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.14), transparent 55%),
-                  linear-gradient(145deg, #12141d, #050509);
-      box-shadow: var(--shadow-soft);
-      overflow: hidden;
-      isolation: isolate;
-    }
-
-    .hero-visual-tag {
-      position: absolute;
-      top: 1.25rem;
-      right: 1.25rem;
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      padding: 0.35rem 0.9rem;
-      border-radius: 999px;
-      background: rgba(5, 5, 9, 0.8);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      color: var(--brand-gray);
-    }
-
-    .hero-visual-circle {
-      position: absolute;
-      inset: -40%;
-      background: radial-gradient(circle at 15% 0, rgba(255, 255, 255, 0.16), transparent 60%),
-                  radial-gradient(circle at 85% 100%, rgba(249, 66, 58, 0.5), transparent 55%);
-      opacity: 0.85;
-      mix-blend-mode: screen;
-      pointer-events: none;
-    }
-
-    .hero-visual-inner {
-      position: relative;
-      border-radius: 1.5rem;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 1rem;
-      backdrop-filter: blur(26px);
-      background: linear-gradient(145deg, rgba(5, 5, 9, 0.88), rgba(5, 5, 9, 0.95));
-      box-shadow: var(--shadow-card);
-      z-index: 1;
-    }
-
-    .hero-visual-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1.1rem;
-    }
-
-    .hero-visual-dot-row {
-      display: flex;
-      gap: 0.4rem;
-    }
-
-    .hero-visual-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.12);
-    }
-
-    .hero-visual-pill {
-      font-size: 0.7rem;
-      padding: 0.3rem 0.7rem;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.03);
-      color: var(--brand-gray);
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-    }
-
-    .hero-visual-main {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr;
-      gap: 1rem;
-      align-items: center;
-    }
-
-    .hero-visual-highlight {
-      font-size: 0.95rem;
-    }
-
-    .hero-visual-highlight h3 {
-      font-size: 1.05rem;
-      margin-bottom: 0.45rem;
-    }
-
-    .hero-visual-highlight p {
-      font-size: 0.8rem;
-      color: var(--brand-gray);
-      margin-bottom: 0.75rem;
-    }
-
-    .hero-visual-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      font-size: 0.7rem;
-    }
-
-    .hero-visual-badges span {
-      padding: 0.25rem 0.55rem;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      color: var(--brand-gray);
-    }
-
-    .hero-visual-metrics {
-      display: grid;
-      gap: 0.5rem;
-      font-size: 0.75rem;
-    }
-
-    .hero-visual-metric {
-      padding: 0.5rem 0.6rem;
-      border-radius: 0.9rem;
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      background: linear-gradient(135deg, rgba(249, 66, 58, 0.12), rgba(5, 5, 9, 0.85));
-    }
-
-    .hero-visual-metric span {
-      display: block;
-      color: var(--brand-gray);
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      margin-bottom: 0.1rem;
-    }
-
-    .hero-visual-metric strong {
-      font-size: 0.9rem;
-    }
-
-    /* ====== PRODUTOS ====== */
-
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.5rem;
-    }
-
-    .product-card {
-      position: relative;
-      border-radius: var(--radius-lg);
-      padding: 1.1rem;
-      background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.1), transparent 45%),
-                  linear-gradient(145deg, #12141d, #050509);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform var(--transition-medium), box-shadow var(--transition-medium), border-color var(--transition-medium), background var(--transition-medium);
-    }
-
-    .product-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-card);
-      border-color: rgba(255, 255, 255, 0.16);
-      background: radial-gradient(circle at top left, rgba(249, 66, 58, 0.18), transparent 45%),
-                  linear-gradient(145deg, #151823, #050509);
-    }
-
-    .product-tag {
-      font-size: 0.65rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--brand-gray);
-      margin-bottom: 0.6rem;
-    }
-
-    .product-name {
-      font-size: 1rem;
-      font-weight: 500;
-      margin-bottom: 0.35rem;
-    }
-
-    .product-desc {
-      font-size: 0.8rem;
-      color: var(--brand-gray);
-      margin-bottom: 0.8rem;
-      min-height: 42px;
-    }
-
-    .product-meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.75rem;
-      color: var(--brand-gray);
-    }
-
-    .product-meta span strong {
-      color: #ffffff;
-    }
-
-    .product-pill {
-      padding: 0.25rem 0.7rem;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-    }
-
-    /* ====== CUPONS ====== */
-
-    .coupon-layout {
-      display: grid;
-      grid-template-columns: 3fr 2fr;
-      gap: 1.75rem;
-      align-items: stretch;
-    }
-
-    .coupon-left {
-      border-radius: var(--radius-lg);
-      padding: 1.4rem;
-      background: linear-gradient(145deg, #12141d, #050509);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow: var(--shadow-soft);
-    }
-
-    .coupon-left h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.4rem;
-    }
-
-    .coupon-left p {
-      font-size: 0.85rem;
-      color: var(--brand-gray);
-      margin-bottom: 1.2rem;
-      max-width: 480px;
-    }
-
-    .coupon-cards {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.9rem;
-    }
-
-    .coupon-card {
-      border-radius: 1rem;
-      padding: 0.8rem;
-      background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), transparent 45%),
-                  linear-gradient(145deg, #171a24, #050509);
-      border: 1px dashed rgba(255, 255, 255, 0.14);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .coupon-label {
-      font-size: 0.65rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--brand-gray);
-      margin-bottom: 0.35rem;
-    }
-
-    .coupon-code {
-      font-family: "Inter", monospace;
-      font-size: 0.95rem;
-      font-weight: 600;
-      letter-spacing: 0.26em;
-      text-transform: uppercase;
-      margin-bottom: 0.45rem;
-    }
-
-    .coupon-extra {
-      font-size: 0.7rem;
-      color: var(--brand-gray);
-      margin-bottom: 0.5rem;
-    }
-
-    .coupon-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.7rem;
-      color: var(--brand-gray);
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-
-    .coupon-footer button {
-      font-size: 0.7rem;
-      padding: 0.25rem 0.7rem;
-    }
-
-    .coupon-right {
-      border-radius: var(--radius-lg);
-      padding: 1.4rem;
-      background: radial-gradient(circle at top left, rgba(249, 66, 58, 0.22), transparent 55%),
-                  linear-gradient(145deg, #151823, #050509);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 1.1rem;
-    }
-
-    .coupon-right h3 {
-      font-size: 1.05rem;
-      margin-bottom: 0.3rem;
-    }
-
-    .coupon-right p {
-      font-size: 0.8rem;
-      color: var(--brand-gray);
-      margin-bottom: 0.8rem;
-    }
-
-    .coupon-highlight-metric {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 0.2rem;
-    }
-
-    .coupon-highlight-label {
-      font-size: 0.75rem;
-      color: var(--brand-gray);
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      margin-bottom: 0.6rem;
-    }
-
-    .coupon-logos {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      font-size: 0.7rem;
-      color: var(--brand-gray);
-    }
-
-    .coupon-logos span {
-      padding: 0.18rem 0.5rem;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-    }
-
-    /* ====== LAYOUT CARROSSEL + TEXTO ====== */
-
-    .carousel-container {
-      border-radius: var(--radius-lg);
-      padding: 1.3rem;
-      background: linear-gradient(145deg, #12141d, #050509);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: var(--shadow-soft);
-      display: grid;
-      grid-template-columns: 3fr 2fr;
-      gap: 1.4rem;
-      align-items: center;
-    }
-
-    .carousel-text {
-      font-size: 0.85rem;
-      color: var(--brand-gray);
-    }
-
-    .carousel-text h3 {
-      font-size: 1.05rem;
-      margin-bottom: 0.4rem;
-      color: #ffffff;
-    }
-
-    .carousel-list {
-      margin-top: 0.75rem;
-      font-size: 0.8rem;
-      list-style: none;
-      display: grid;
-      gap: 0.25rem;
-    }
-
-    .carousel-list li::before {
-      content: "•";
-      margin-right: 0.4rem;
-      color: var(--brand-red);
-    }
-
-    /* ===== CARROSSEL PREMIUM (IMAGEM ÚNICA) ===== */
-
-    .carousel-premium {
-      position: relative;
-      width: 100%;
-      height: 330px;
-      background: #0c0e14;
-      border-radius: 1.2rem;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.45);
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .carousel-premium .carousel-track {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
-
-    .carousel-premium .carousel-track img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0;
-      transform: scale(1.05);
-      transition: opacity 0.8s ease, transform 8s ease;
-    }
-
-    .carousel-premium .carousel-track img.active {
-      opacity: 1;
-      transform: scale(1);
-    }
-
-    .carousel-premium .carousel-arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 46px;
-      height: 46px;
-      border: 2px solid var(--brand-red);
-      background: rgba(0,0,0,0.4);
-      backdrop-filter: blur(6px);
-      color: #fff;
-      font-size: 1.6rem;
-      border-radius: 0.9rem;
-      cursor: pointer;
-      display: grid;
-      place-items: center;
-      transition: 0.25s ease;
-      z-index: 10;
-    }
-
-    .carousel-premium .carousel-arrow:hover {
-      background: var(--brand-red);
-      transform: translateY(-50%) scale(1.05);
-      box-shadow: 0 0 12px rgba(249,66,58,0.7);
-    }
-
-    .carousel-premium .carousel-arrow.left { left: 18px; }
-    .carousel-premium .carousel-arrow.right { right: 18px; }
-
-    .carousel-premium .carousel-dots {
-      position: absolute;
-      bottom: 14px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 8px;
-    }
-
-    .carousel-premium .carousel-dots button {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.35);
-      border: none;
-      cursor: pointer;
-      transition: 0.25s ease;
-    }
-
-    .carousel-premium .carousel-dots button.active {
-      background: var(--brand-red);
-      box-shadow: 0 0 10px rgba(249,66,58,0.8);
-      transform: scale(1.25);
-    }
-
-    footer {
-      padding: 1.5rem;
-      font-size: 0.75rem;
-      color: var(--brand-gray);
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-      text-align: center;
-    }
-
-    /* ====== ANIMAÇÕES DE ENTRADA ====== */
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(15px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ====== MODAL REPRESENTANTES ====== */
-
-    .representantes-backdrop {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.7);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity var(--transition-medium);
-      z-index: 1000;
-    }
-
-    .representantes-backdrop.open {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    .representantes-modal {
-      max-width: 960px;
-      width: 100%;
-      margin: 1.5rem;
-      border-radius: var(--radius-lg);
-      padding: 1.5rem;
-      background: radial-gradient(circle at top left, rgba(249, 66, 58, 0.25), transparent 55%),
-                  linear-gradient(145deg, #151823, #050509);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      box-shadow: var(--shadow-soft);
-    }
-
-    .representantes-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 1.25rem;
-      gap: 1rem;
-    }
-
-    .representantes-header h2 {
-      font-size: 1.2rem;
-    }
-
-    .representantes-header p {
-      font-size: 0.85rem;
-      color: var(--brand-gray);
-      max-width: 480px;
-    }
-
-    .representantes-close {
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      background: rgba(5, 5, 9, 0.9);
-      color: #ffffff;
-      padding: 0.3rem 0.8rem;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      cursor: pointer;
-      transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
-    }
-
-    .representantes-close:hover {
-      background: #ffffff;
-      color: #000000;
-      transform: translateY(-1px);
-    }
 
+  @keyframes diamondFire {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes diamondPulse {
+    0%, 100% {
+      text-shadow:
+        0 0 4px  rgba(255,255,255,0.7),
+        0 0 14px rgba(255,255,255,0.9),
+        0 0 26px rgba(255,120,0,0.65),
+        0 0 40px rgba(255,40,0,0.55);
+    }
+    50% {
+      text-shadow:
+        0 0 6px  rgba(255,255,255,0.9),
+        0 0 18px rgba(160,230,255,0.9),
+        0 0 32px rgba(255,190,120,0.8),
+        0 0 52px rgba(255,90,0,0.8);
+    }
+  }
+
+  @keyframes diamondShine {
+    0%   { transform: translateX(-130%) skewX(-20deg); opacity: 0; }
+    20%  { opacity: 1; }
+    50%  { transform: translateX(120%) skewX(-20deg); opacity: 0; }
+    100% { opacity: 0; }
+  }
+
+  .hero-badge-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #fff, var(--brand-red));
+    box-shadow: 0 0 15px rgba(255, 69, 90, 0.7);
+  }
+
+  .hero-title {
+    font-size: clamp(2.2rem, 3vw + 1.2rem, 3.2rem);
+    line-height: 1.05;
+    margin-bottom: 1.1rem;
+  }
+
+  .hero-title span {
+    color: var(--brand-red);
+  }
+
+  .hero-text {
+    font-size: 0.95rem;
+    color: var(--brand-gray);
+    max-width: 480px;
+    margin-bottom: 0;
+  }
+
+  .hero-visual {
+    position: relative;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.14), transparent 55%),
+                linear-gradient(145deg, #12141d, #050509);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  .hero-visual-tag {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(5, 5, 9, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--brand-gray);
+  }
+
+  .hero-visual-circle {
+    position: absolute;
+    inset: -40%;
+    background: radial-gradient(circle at 15% 0, rgba(255, 255, 255, 0.16), transparent 60%),
+                radial-gradient(circle at 85% 100%, rgba(249, 66, 58, 0.5), transparent 55%);
+    opacity: 0.85;
+    mix-blend-mode: screen;
+    pointer-events: none;
+  }
+
+  .hero-visual-inner {
+    position: relative;
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1rem;
+    backdrop-filter: blur(26px);
+    background: linear-gradient(145deg, rgba(5, 5, 9, 0.88), rgba(5, 5, 9, 0.95));
+    box-shadow: var(--shadow-card);
+    z-index: 1;
+  }
+
+  .hero-visual-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.1rem;
+  }
+
+  .hero-visual-dot-row {
+    display: flex;
+    gap: 0.4rem;
+  }
+
+  .hero-visual-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  .hero-visual-pill {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--brand-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+  }
+
+  .hero-visual-main {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .hero-visual-highlight {
+    font-size: 0.95rem;
+  }
+
+  .hero-visual-highlight h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .hero-visual-highlight p {
+    font-size: 0.8rem;
+    color: var(--brand-gray);
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-visual-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    font-size: 0.7rem;
+  }
+
+  .hero-visual-badges span {
+    padding: 0.25rem 0.55rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: var(--brand-gray);
+  }
+
+  .hero-visual-metrics {
+    display: grid;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .hero-visual-metric {
+    padding: 0.5rem 0.6rem;
+    border-radius: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: linear-gradient(135deg, rgba(249, 66, 58, 0.12), rgba(5, 5, 9, 0.85));
+  }
+
+  .hero-visual-metric span {
+    display: block;
+    color: var(--brand-gray);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    margin-bottom: 0.1rem;
+  }
+
+  .hero-visual-metric strong {
+    font-size: 0.9rem;
+  }
+
+  /* ====== CUPONS ====== */
+
+  .coupon-layout {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 1.75rem;
+    align-items: stretch;
+  }
+
+  .coupon-left {
+    border-radius: var(--radius-lg);
+    padding: 1.4rem;
+    background: linear-gradient(145deg, #12141d, #050509);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .coupon-left h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .coupon-left p {
+    font-size: 0.85rem;
+    color: var(--brand-gray);
+    margin-bottom: 1.2rem;
+    max-width: 480px;
+  }
+
+  .coupon-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.9rem;
+  }
+
+  .coupon-card {
+    border-radius: 1rem;
+    padding: 0.8rem;
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), transparent 45%),
+                linear-gradient(145deg, #171a24, #050509);
+    border: 1px dashed rgba(255, 255, 255, 0.14);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .coupon-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--brand-gray);
+    margin-bottom: 0.35rem;
+  }
+
+  .coupon-code {
+    font-family: "Inter", monospace;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    margin-bottom: 0.45rem;
+  }
+
+  .coupon-extra {
+    font-size: 0.7rem;
+    color: var(--brand-gray);
+    margin-bottom: 0.5rem;
+  }
+
+  .coupon-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.7rem;
+    color: var(--brand-gray);
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .coupon-footer button {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.7rem;
+  }
+
+  .coupon-right {
+    border-radius: var(--radius-lg);
+    padding: 1.4rem;
+    background: radial-gradient(circle at top left, rgba(249, 66, 58, 0.22), transparent 55%),
+                linear-gradient(145deg, #151823, #050509);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.1rem;
+  }
+
+  .coupon-right h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .coupon-right p {
+    font-size: 0.8rem;
+    color: var(--brand-gray);
+    margin-bottom: 0.8rem;
+  }
+
+  .coupon-highlight-metric {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+  }
+
+  .coupon-highlight-label {
+    font-size: 0.75rem;
+    color: var(--brand-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    margin-bottom: 0.6rem;
+  }
+
+  .coupon-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    font-size: 0.7rem;
+    color: var(--brand-gray);
+  }
+
+  .coupon-logos span {
+    padding: 0.18rem 0.5rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+  }
+
+  /* ====== LAYOUT CARROSSEL + TEXTO ====== */
+
+  .carousel-container {
+    border-radius: var(--radius-lg);
+    padding: 1.3rem;
+    background: linear-gradient(145deg, #12141d, #050509);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow-soft);
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 1.4rem;
+    align-items: center;
+  }
+
+  .carousel-text {
+    font-size: 0.85rem;
+    color: var(--brand-gray);
+  }
+
+  .carousel-text h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.4rem;
+    color: #ffffff;
+  }
+
+  .carousel-list {
+    margin-top: 0.75rem;
+    font-size: 0.8rem;
+    list-style: none;
+    display: grid;
+    gap: 0.25rem;
+  }
+
+  .carousel-list li::before {
+    content: "•";
+    margin-right: 0.4rem;
+    color: var(--brand-red);
+  }
+
+  /* ===== CARROSSEL PREMIUM (IMAGEM ÚNICA) ===== */
+
+  .carousel-premium {
+    position: relative;
+    width: 100%;
+    height: 330px;
+    background: #0c0e14;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.45);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .carousel-premium .carousel-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .carousel-premium .carousel-track img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transform: scale(1.05);
+    transition: opacity 0.20s ease, transform 15s ease;
+  }
+
+  .carousel-premium .carousel-track img.active {
+    opacity: 1;
+    transform: scale(0.95);
+  }
+
+  .carousel-premium .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 46px;
+    height: 46px;
+    border: 2px solid var(--brand-red);
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(6px);
+    color: #fff;
+    font-size: 1.6rem;
+    border-radius: 0.9rem;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    transition: 0.80s ease;
+    z-index: 10;
+  }
+
+  .carousel-premium .carousel-arrow:hover {
+    background: var(--brand-red);
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 0 12px rgba(249,66,58,0.7);
+  }
+
+  .carousel-premium .carousel-arrow.left { left: 18px; }
+  .carousel-premium .carousel-arrow.right { right: 18px; }
+
+  .carousel-premium .carousel-dots {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+  }
+
+  .carousel-premium .carousel-dots button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.35);
+    border: none;
+    cursor: pointer;
+    transition: 0.25s ease;
+  }
+
+  .carousel-premium .carousel-dots button.active {
+    background: var(--brand-red);
+    box-shadow: 0 0 10px rgba(249,66,58,0.8);
+    transform: scale(1.25);
+  }
+
+  footer {
+    padding: 1.5rem;
+    font-size: 0.75rem;
+    color: var(--brand-gray);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+  }
+
+  /* ====== ANIMAÇÕES DE ENTRADA ====== */
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ====== MODAL REPRESENTANTES ====== */
+
+  .representantes-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-medium);
+    z-index: 1000;
+  }
+
+  .representantes-backdrop.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .representantes-modal {
+    max-width: 960px;
+    width: 100%;
+    margin: 1.5rem;
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    background: radial-gradient(circle at top left, rgba(249, 66, 58, 0.25), transparent 55%),
+                linear-gradient(145deg, #151823, #050509);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .representantes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
+    gap: 1rem;
+  }
+
+  .representantes-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .representantes-header p {
+    font-size: 0.85rem;
+    color: var(--brand-gray);
+    max-width: 480px;
+  }
+
+  .representantes-close {
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(5, 5, 9, 0.9);
+    color: #ffffff;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    cursor: pointer;
+    transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+  }
+
+  .representantes-close:hover {
+    background: #ffffff;
+    color: #000000;
+    transform: translateY(-1px);
+  }
+
+  .representantes-body {
+    display: grid;
+    grid-template-columns: 1.4fr 1.6fr;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+
+  .representantes-map {
+    border-radius: 1.1rem;
+    padding: 1rem;
+    background: linear-gradient(145deg, #12141d, #050509);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 0.8rem;
+  }
+
+  .representantes-map-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--brand-gray);
+    margin-bottom: 0.6rem;
+  }
+
+  .br-map {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.4rem;
+    margin-top: 0.4rem;
+  }
+
+  .br-map button {
+    border-radius: 0.9rem;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: rgba(245, 246, 248, 0.98);
+    color: #111111;
+    padding: 0.6rem 1.1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.15rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    transition:
+      background var(--transition-fast),
+      border-color var(--transition-fast),
+      transform var(--transition-fast),
+      box-shadow var(--transition-fast),
+      color var(--transition-fast);
+  }
+
+  .br-map button span {
+    font-size: 0.7rem;
+    color: #6b6f7a;
+  }
+
+  /* Estado em destaque (hover/selecionado) */
+  .br-map button.active,
+  .br-map button:hover {
+    background: linear-gradient(135deg, var(--brand-red), #ff6b6b);
+    border-color: rgba(249, 66, 58, 0.9);
+    color: #ffffff;
+    box-shadow: 0 14px 28px rgba(249, 66, 58, 0.55);
+    transform: translateY(-3px) scale(1.03);
+  }
+
+  .br-map button.active span,
+  .br-map button:hover span {
+    color: #ffecec;
+  }
+
+  .representantes-list {
+    border-radius: 1.1rem;
+    padding: 1rem;
+    background: linear-gradient(145deg, #12141d, #050509);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .representantes-list-header {
+    margin-bottom: 0.5rem;
+  }
+
+  .representantes-list-header span {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--brand-gray);
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .representantes-list-header h3 {
+    font-size: 1rem;
+  }
+
+  .representante-card {
+    border-radius: 0.9rem;
+    padding: 0.7rem 0.8rem;
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.06), transparent 100%),
+                linear-gradient(145deg, rgba(249, 66, 58, 0.9), rgba(249, 66, 58, 0.8));
+    border: 1px solid black;
+  }
+
+  .representante-card strong {
+    display: block;
+    margin-bottom: 0.70rem;
+    font-size: 0.88rem;
+  }
+
+  .representante-card div {
+    font-size: 0.78rem;
+    color: black;
+  }
+
+  .representantes-empty {
+    font-size: 0.8rem;
+    color: var(--brand-gray);
+  }
+
+  .representantes-regioes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .regioes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .btn-regiao {
+    padding: 0.55rem;
+    border-radius: 0.7rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(5, 5, 9, 0.8);
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    transition: 0.25s;
+  }
+
+  .btn-regiao:hover {
+    background: linear-gradient(135deg, var(--brand-red), #ff4d5e);
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+
+  @media (max-width: 768px) {
     .representantes-body {
-      display: grid;
-      grid-template-columns: 1.4fr 1.6fr;
-      gap: 1.5rem;
-      align-items: stretch;
-    }
-
-    .representantes-map {
-      border-radius: 1.1rem;
-      padding: 1rem;
-      background: linear-gradient(145deg, #12141d, #050509);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      font-size: 0.8rem;
-    }
-
-    .representantes-map-title {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--brand-gray);
-      margin-bottom: 0.6rem;
+      grid-template-columns: 1fr;
     }
 
     .br-map {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 0.4rem;
-      margin-top: 0.4rem;
-    }
-
-    .br-map button {
-      border-radius: 0.65rem;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      background: rgba(5, 5, 9, 0.9);
-      color: #ffffff;
-      padding: 0.3rem 0.4rem;
-      font-size: 0.75rem;
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.15rem;
-      transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
-    }
-
-    .br-map button span {
-      font-size: 0.65rem;
-      color: var(--brand-gray);
-    }
-
-    .br-map button.active,
-    .br-map button:hover {
-      background: linear-gradient(135deg, var(--brand-red), #ff4d5e);
-      border-color: rgba(255, 255, 255, 0.6);
-      box-shadow: 0 10px 24px rgba(249, 66, 58, 0.5);
-      transform: translateY(-1px);
-    }
-
-    .representantes-list {
-      border-radius: 1.1rem;
-      padding: 1rem;
-      background: linear-gradient(145deg, #12141d, #050509);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      font-size: 0.8rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .representantes-list-header {
-      margin-bottom: 0.5rem;
-    }
-
-    .representantes-list-header span {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--brand-gray);
-      display: block;
-      margin-bottom: 0.25rem;
-    }
-
-    .representantes-list-header h3 {
-      font-size: 1rem;
-    }
-
-    .representante-card {
-      border-radius: 0.9rem;
-      padding: 0.7rem 0.8rem;
-      background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.06), transparent 60%),
-                  linear-gradient(145deg, #171a24, #050509);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .representante-card strong {
-      display: block;
-      margin-bottom: 0.25rem;
-      font-size: 0.88rem;
-    }
-
-    .representante-card div {
-      font-size: 0.78rem;
-      color: var(--brand-gray);
-    }
-
-    .representantes-empty {
-      font-size: 0.8rem;
-      color: var(--brand-gray);
-    }
-
-    .representantes-regioes {
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-
-    .regioes-grid {
-      display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0.5rem;
     }
+  }
 
-    .btn-regiao {
-      padding: 0.55rem;
-      border-radius: 0.7rem;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      background: rgba(5, 5, 9, 0.8);
-      color: #fff;
-      cursor: pointer;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      transition: 0.25s;
-    }
+  .btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.6rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: #ffffff;
+    text-decoration: none;
+    box-shadow: 0 10px 20px rgba(18, 140, 126, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  }
 
-    .btn-regiao:hover {
-      background: linear-gradient(135deg, var(--brand-red), #ff4d5e);
-      transform: translateY(-2px);
-      border-color: rgba(255, 255, 255, 0.6);
-    }
+  .btn-whatsapp:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 28px rgba(18, 140, 126, 0.55);
+    opacity: 0.95;
+  }
 
-    @media (max-width: 768px) {
-      .representantes-body {
-        grid-template-columns: 1fr;
-      }
-
-      .br-map {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-    }
-
-    .btn-whatsapp {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 0.6rem;
-      padding: 0.4rem 0.9rem;
-      border-radius: 999px;
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      border: none;
-      cursor: pointer;
-      background: linear-gradient(135deg, #25D366, #128C7E);
-      color: #ffffff;
-      text-decoration: none;
-      box-shadow: 0 10px 20px rgba(18, 140, 126, 0.4);
-      transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
-    }
-
-    .btn-whatsapp:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 14px 28px rgba(18, 140, 126, 0.55);
-      opacity: 0.95;
-    }
-
-    /* ================================
-   TEXTO CRISTAL TRANSLÚCIDO PREMIUM
-   ================================ */
-.ciosp-crystal {
+  /* ================================
+     TEXTO CRISTAL TRANSLÚCIDO PREMIUM
+     ================================ */
+ .ciosp-crystal {
   position: relative;
   display: inline-block;
 
-  font-size: 3rem;               
+  font-size: 3rem;
   font-weight: 900;
   letter-spacing: 0.28em;
   text-transform: uppercase;
 
-  /* Efeito cristal: mistura de transparência + brilho */
   color: transparent;
-  background: 
+  background:
     linear-gradient(
       135deg,
       rgba(255,255,255,0.95) 0%,
-      rgba(255,255,255,0.55) 20%,
-      rgba(200,200,255,0.35) 40%,
-      rgba(255,255,255,0.85) 60%,
-      rgba(150,180,255,0.45) 80%,
-      rgba(255,255,255,1) 100%
+      rgba(255,200,200,0.55) 18%,
+      rgba(255,150,150,0.45) 35%,
+      rgba(255,180,180,0.85) 55%,
+      rgba(249,66,58,0.75) 75%,   /* 🔥 Vermelho Edel White */
+      rgba(255,230,230,1) 100%
     );
   background-size: 250% 250%;
   -webkit-background-clip: text;
   background-clip: text;
 
-  /* borda transparente como vidro */
-  -webkit-text-stroke: 1.2px rgba(255,255,255,0.5);
+  -webkit-text-stroke: 1.2px rgba(255,255,255,0.55);
 
-  /* brilho ao redor */
   text-shadow:
-    0 0 10px rgba(255,255,255,0.4),
-    0 0 22px rgba(180,200,255,0.35),
-    0 0 40px rgba(255,255,255,0.25);
+    0 0 10px rgba(255,180,180,0.45),
+    0 0 22px rgba(249,66,58,0.35),
+    0 0 40px rgba(255,200,200,0.3);
 
   animation:
     crystalReflex 6s ease-in-out infinite,
     crystalPulse 3.5s infinite ease-in-out;
 }
 
-
-/* Reflexo “passando dentro do cristal” */
+/* Reflexo em movimento */
 @keyframes crystalReflex {
   0%   { background-position: 0% 50%; }
   50%  { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-
-/* Pulso sutil do brilho cristalizado */
+/* Pulso do brilho */
 @keyframes crystalPulse {
   0%, 100% {
     text-shadow:
-      0 0 8px rgba(255,255,255,0.6),
-      0 0 18px rgba(200,220,255,0.5),
-      0 0 32px rgba(150,180,255,0.4);
+      0 0 8px rgba(255,220,220,0.8),
+      0 0 18px rgba(249,66,58,0.65),
+      0 0 32px rgba(255,150,150,0.55);
   }
   50% {
     text-shadow:
-      0 0 14px rgba(255,255,255,0.9),
-      0 0 32px rgba(210,230,255,0.7),
-      0 0 52px rgba(200,220,255,0.65);
+      0 0 14px rgba(255,255,255,1),
+      0 0 32px rgba(255,200,200,0.85),
+      0 0 52px rgba(249,66,58,0.8);
   }
 }
 
-
-/* ================================
-   BRILHOS CRISTALINOS FLUTUANDO
-   ================================ */
+/* Partículas brilhantes */
 .ciosp-crystal::after {
   content: "";
   position: absolute;
@@ -1169,19 +1120,17 @@
   pointer-events: none;
 
   background:
-    radial-gradient(circle, rgba(255,255,255,0.95) 0%, transparent 55%) 20% 30% / 6px 6px,
-    radial-gradient(circle, rgba(255,255,255,0.85) 0%, transparent 55%) 65% 25% / 4px 4px,
-    radial-gradient(circle, rgba(255,255,255,0.9) 0%, transparent 60%) 50% 70% / 5px 5px,
-    radial-gradient(circle, rgba(255,255,255,0.75) 0%, transparent 60%) 80% 60% / 3px 3px;
+    radial-gradient(circle, rgba(255,255,255,0.9) 0%, transparent 55%) 20% 30% / 6px 6px,
+    radial-gradient(circle, rgba(255,180,180,0.85) 0%, transparent 55%) 65% 25% / 4px 4px,
+    radial-gradient(circle, rgba(249,66,58,0.8) 0%, transparent 60%) 50% 70% / 5px 5px,
+    radial-gradient(circle, rgba(255,180,180,0.75) 0%, transparent 60%) 80% 60% / 3px 3px;
 
   background-repeat: no-repeat;
-
   animation: crystalParticles 7s infinite ease-in-out alternate;
   opacity: 0.9;
 }
 
-
-/* Movimento suave das partículas brilhantes */
+/* Movimentação das partículas */
 @keyframes crystalParticles {
   0% {
     background-position:
@@ -1204,84 +1153,517 @@
       46% 68%,
       75% 55%;
   }
-
 }
-    /* ====== RESPONSIVO ====== */
 
-    @media (max-width: 960px) {
-      #inicio {
-        grid-template-columns: 1fr;
-      }
+.ciosp-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-      .hero-visual {
-        order: -1;
-      }
+  padding: 0.9rem 3rem;
+  border-radius: 999px;
 
-      .coupon-layout,
-      .carousel-container {
-        grid-template-columns: 1fr;
-      }
+  background:
+    radial-gradient(circle at 20% 0, rgba(255,255,255,0.28), transparent 60%),
+    linear-gradient(135deg, rgba(249,66,58,0.96), rgba(255,140,120,0.96)); /* vermelho Edel */
 
-      .products-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+  box-shadow:
+    0 18px 40px rgba(249,66,58,0.55),
+    0 0 30px rgba(255,255,255,0.25);
 
-      .section-header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+  border: 1px solid rgba(255,255,255,0.5);
+}
+
+/* Se quiser um ajuste específico no tema claro */
+body.theme-light .ciosp-pill {
+  background:
+    radial-gradient(circle at 20% 0, rgba(255,255,255,0.9), transparent 60%),
+    linear-gradient(135deg, rgba(249,66,58,0.96), rgba(255,150,130,0.98));
+  box-shadow: 0 16px 36px rgba(249,66,58,0.45);
+}
+
+
+  /* ============================
+     PRODUTOS – CARROSSEL EM LOOP
+     ============================ */
+
+  .products-carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    padding-block: 0.75rem;
+  }
+
+  .products-carousel::before,
+  .products-carousel::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 70px;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .products-carousel::before {
+    left: 0;
+    background: linear-gradient(90deg, #050509, transparent);
+  }
+
+  .products-carousel::after {
+    right: 0;
+    background: linear-gradient(-90deg, #050509, transparent);
+  }
+
+  .products-track {
+    display: flex;
+    gap: 1.5rem;
+    align-items: stretch;
+    will-change: transform;
+  }
+
+.product-card {
+  position: relative;
+  flex: 0 0 290px;
+  max-width: 320px;
+  border-radius: var(--radius-lg);
+  padding: 1.1rem;
+  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.1), transparent 45%),
+              linear-gradient(145deg, #12141d, #050509);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: visible;                 /* deixa a imagem sair para fora */
+  cursor: pointer;
+  transition:
+    transform .45s ease,
+    box-shadow .45s ease,
+    border-color .45s ease,
+    background .45s ease;
+  z-index: 1;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+  border-color: rgba(255, 255, 255, 0.25);
+  background: radial-gradient(circle at top left, rgba(249, 66, 58, 0.24), transparent 55%),
+              linear-gradient(145deg, #181b24, #050509);
+  z-index: 3;                        /* fica acima do card do lado */
+}
+
+  .product-tag {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--brand-gray);
+    margin-bottom: 0.6rem;
+  }
+
+  .product-name {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.35rem;
+  }
+
+  .product-desc {
+    font-size: 0.8rem;
+    color: var(--brand-gray);
+    margin-bottom: 0.8rem;
+    min-height: 42px;
+  }
+
+  .product-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    color: var(--brand-gray);
+    gap: 0.5rem;
+  }
+
+  .product-meta span strong {
+    color: #ffffff;
+  }
+
+  .product-pill {
+    padding: 0.30rem 1rem;
+    border-radius: 800px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.20em;
+    text-align:justify;
+  }
+
+ .product-image {
+  position: absolute;
+  top: 50%;
+  right: -190px;                     /* fica ao lado do card */
+  transform: translateY(-50%) translateX(40px);
+  width: 190px;
+  height: 190px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(10, 12, 20, 0.9);
+  backdrop-filter: blur(18px);
+  border-radius: 1.4rem;
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.65);
+
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity .35s ease,
+    transform .55s cubic-bezier(.2, .7, .2, 1);
+}
+
+.product-image img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+/* animação de deslizamento lateral + leve zoom */
+.product-card:hover .product-image {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0) scale(1.08);
+}
+
+  @media (max-width: 960px) {
+    .products-track {
+      gap: 1rem;
+    }
+    .product-card {
+      flex: 0 0 260px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .products-carousel::before,
+    .products-carousel::after {
+      width: 40px;
+    }
+    .product-card {
+      flex: 0 0 80%;
+    }
+  }
+
+  /* ============================
+     TEMA CLARO (OVERRIDES)
+     ============================ */
+
+  /* Fundo claro com vida */
+  body.theme-light {
+    background:
+      radial-gradient(circle at top left, #fff5f5 0, #f9fafb 40%, #f3f4f6 100%);
+    color: #0f172a;
+  }
+
+  /* navbar levemente destacada */
+  body.theme-light header {
+    background: linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.96),
+      rgba(255,255,255,0.85),
+      transparent
+    );
+    border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+  }
+
+  /* links do menu com cor mais viva no hover */
+  body.theme-light .nav-links a {
+    opacity: 0.7;
+    color: #111827;
+  }
+  body.theme-light .nav-links a.active,
+  body.theme-light .nav-links a:hover {
+    opacity: 1;
+  }
+
+  body.theme-light .hero-title,
+  body.theme-light .section-title,
+  body.theme-light .carousel-text h3 {
+    color: #000;
+  }
+
+  body.theme-light .hero-text,
+  body.theme-light .section-subtitle,
+  body.theme-light .carousel-text p,
+  body.theme-light .representantes-header p,
+  body.theme-light .coupon-left p,
+  body.theme-light .coupon-right p,
+  body.theme-light .product-desc,
+  body.theme-light .product-meta,
+  body.theme-light .coupon-extra,
+  body.theme-light .coupon-footer,
+  body.theme-light .representantes-empty {
+    color: #555;
+  }
+
+  /* eyebrow mais marcante */
+  body.theme-light .section-eyebrow {
+    color: #f97373;
+  }
+
+  /* títulos mais escuros */
+  body.theme-light .section-title {
+    color: #020617;
+  }
+
+  /* HERO – cartão da direita com blend de vermelho */
+  body.theme-light .hero-visual {
+    background:
+      radial-gradient(circle at top left, rgba(249, 66, 58, 0.08), transparent 55%),
+      linear-gradient(145deg, #ffffff, #f9fafb);
+    border-color: rgba(226, 232, 240, 0.9);
+    box-shadow: 0 22px 55px rgba(15, 23, 42, 0.16);
+  }
+
+  body.theme-light .hero-visual-inner {
+    background: linear-gradient(145deg, #ffffff, #f3f4f6);
+    border-color: rgba(226, 232, 240, 0.9);
+    box-shadow: 0 14px 35px rgba(15, 23, 42, 0.12);
+  }
+
+  body.theme-light .hero-visual-tag,
+  body.theme-light .hero-visual-pill {
+    background: #f1f3f6;
+    color: #555;
+    border-color: rgba(0,0,0,0.08);
+  }
+
+  body.theme-light .hero-visual-metric {
+    background: linear-gradient(135deg, rgba(249,66,58,0.06), #ffffff);
+    border-color: rgba(0,0,0,0.08);
+  }
+
+  /* ===== VERSÃO LIGHT DOS PRODUCT CARDS ===== */
+
+body.theme-light .product-card {
+  background:
+    radial-gradient(circle at top left, rgba(249, 66, 58, 0.04), transparent 55%),
+    linear-gradient(145deg, #ffffff, #f9fafb);
+  border-color: rgba(226, 232, 240, 0.95);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+}
+
+body.theme-light .product-card:hover {
+  background:
+    radial-gradient(circle at top left, rgba(249, 66, 58, 0.10), transparent 60%),
+    linear-gradient(145deg, #ffffff, #f3f4f6);
+  border-color: rgba(248, 113, 113, 0.65);
+  box-shadow: 0 22px 55px rgba(15, 23, 42, 0.18);
+}
+
+/* imagem flutuante em light: mais clara, vidro leitoso */
+body.theme-light .product-image {
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 26px 60px rgba(148, 163, 184, 0.5);
+}
+
+/* textos dentro dos cards no tema claro */
+body.theme-light .product-tag {
+  color: #f97373;
+}
+
+body.theme-light .product-name {
+  color: #020617;
+}
+
+body.theme-light .product-desc,
+body.theme-light .product-meta {
+  color: #4b5563;
+}
+
+body.theme-light .product-meta span strong {
+  color: #111827;
+}
+
+body.theme-light .product-pill {
+  background: #fef2f2;
+  border-color: rgba(248, 113, 113, 0.55);
+  color: #b91c1c;
+}
+
+
+  /* cards de cupom com cor */
+  body.theme-light .coupon-card {
+    background:
+      radial-gradient(circle at top left, rgba(249, 66, 58, 0.04), transparent 60%),
+      linear-gradient(145deg, #ffffff, #f9fafb);
+    border-color: rgba(226,232,240,0.9);
+    box-shadow: 0 12px 32px rgba(15,23,42,0.08);
+  }
+  body.theme-light .coupon-code {
+    color: #111827;
+  }
+  body.theme-light .coupon-label {
+    color: #9ca3af;
+  }
+
+  /* containers gerais claros, sem matar os degradês dos cupons/produtos */
+  body.theme-light .carousel-container,
+  body.theme-light .coupon-left,
+  body.theme-light .coupon-right,
+  body.theme-light .carousel-premium,
+  body.theme-light .representantes-map,
+  body.theme-light .representantes-list,
+  body.theme-light .representantes-modal {
+    background: linear-gradient(145deg, #ffffff, #f9fafb);
+    border-color: rgba(0,0,0,0.06);
+    box-shadow: 0 10px 25px rgba(15,23,42,0.08);
+  }
+
+  body.theme-light .coupon-logos span {
+    border-color: rgba(0,0,0,0.16);
+    color: #555;
+  }
+
+  body.theme-light .coupon-layout {
+    border-color: transparent;
+  }
+
+  body.theme-light .products-carousel::before {
+    background: linear-gradient(90deg, #f7f8fa, transparent);
+  }
+
+  body.theme-light .products-carousel::after {
+    background: linear-gradient(-90deg, #f7f8fa, transparent);
+  }
+
+  body.theme-light .btn-outline {
+    border-color: #000;
+    color: #000;
+  }
+
+  body.theme-light .btn-outline:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  body.theme-light .btn-primary {
+    background: linear-gradient(135deg, var(--brand-red), #ff6b6b);
+    color: #fff;
+    box-shadow: 0 8px 18px rgba(249,66,58,0.3);
+  }
+
+  body.theme-light .product-tag {
+    color: var(--brand-red);
+  }
+
+  body.theme-light .product-name {
+    color: #000;
+  }
+
+  body.theme-light .br-map button {
+    background: #f1f3f6;
+    color: #000;
+    border-color: rgba(0,0,0,0.15);
+  }
+
+  body.theme-light .br-map button.active,
+  body.theme-light .br-map button:hover {
+    background: var(--brand-red);
+    color: #fff;
+  }
+
+  body.theme-light footer {
+    background: #ffffff;
+    color: #666;
+    border-top: 1px solid rgba(0,0,0,0.08);
+  }
+
+  body.theme-light .hero-badge {
+    background: #96C2DB;
+    border-color: rgba(0,0,0,0.08);
+    box-shadow: 0 0 18px rgba(0,0,0,0.08);
+    color: #777;
+  }
+
+  body.theme-light .btn-theme-toggle {
+    border-color: rgba(0,0,0,0.2);
+    color: #000;
+  }
+
+  body.theme-light .btn-theme-toggle:hover {
+    background: rgba(0,0,0,0.04);
+  }
+
+  @media (max-width: 960px) {
+    #inicio {
+      grid-template-columns: 1fr;
     }
 
-    @media (max-width: 768px) {
-      .nav {
-        padding-inline: 1rem;
-      }
-
-      .nav-links {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        padding: 0.75rem 1rem 1rem;
-        background: rgba(5, 5, 9, 0.98);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        flex-direction: column;
-        transform-origin: top;
-        transform: scaleY(0);
-        opacity: 0;
-        pointer-events: none;
-        transition: transform var(--transition-medium), opacity var(--transition-medium);
-      }
-
-      .nav-links.open {
-        transform: scaleY(1);
-        opacity: 1;
-        pointer-events: auto;
-      }
-
-      .nav-cta {
-        display: none;
-      }
-
-      .menu-toggle {
-        display: inline-flex;
-      }
-
-      .products-grid {
-        grid-template-columns: 1fr;
-      }
-
-      main {
-        padding-inline: 1rem;
-      }
-
-      .hero-title {
-        font-size: 2rem;
-      }
+    .hero-visual {
+      order: -1;
     }
-  </style>
+
+    .coupon-layout,
+    .carousel-container {
+      grid-template-columns: 1fr;
+    }
+
+    .section-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .nav {
+      padding-inline: 1rem;
+    }
+
+    .nav-links {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      padding: 0.75rem 1rem 1rem;
+      background: rgba(5, 5, 9, 0.98);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      flex-direction: column;
+      transform-origin: top;
+      transform: scaleY(0);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform var(--transition-medium), opacity var(--transition-medium);
+    }
+
+    .nav-links.open {
+      transform: scaleY(1);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .nav-cta {
+      display: none;
+    }
+
+    .menu-toggle {
+      display: inline-flex;
+    }
+
+    main {
+      padding-inline: 1rem;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .carousel-container {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+
 </head>
-<body>
+<body class="theme-light">
   <!-- ====== HEADER / NAVBAR ====== -->
   <header>
     <div class="nav">
@@ -1291,14 +1673,18 @@
         <a href="#inicio" class="nav-link active">Início</a>
         <a href="#sobre" class="nav-link">Relacionamento</a>
         <a href="#produtos" class="nav-link">Premium</a>
+        <a href="#galeria" class="nav-link">Renovação</a>
         <a href="#cupons" class="nav-link">Cupons</a>
-        <a href="#galeria" class="nav-link">Galeria</a>
       </nav>
 
       <div class="nav-cta">
         <button class="btn btn-outline btn-palestras">Palestras</button>
         <button class="btn btn-primary btn-representante">Falar com representante</button>
       </div>
+
+      <button class="btn-theme-toggle" id="themeToggle" type="button" aria-label="Alternar tema claro/escuro">
+        Modo escuro
+      </button>
 
       <button class="menu-toggle" id="menuToggle">Menu</button>
     </div>
@@ -1308,13 +1694,10 @@
     <!-- ====== HERO ====== -->
     <section id="inicio" class="fade-in">
       <div class="hero-copy">
-      <div class="hero-badge">
-
-
-  <!-- NOVO TEXTO EM "DIAMANTE" -->
-  <div class="ciosp-crystal">CIOSP 2026</div>
-
-</div>
+  
+        <div class="ciosp-pill">
+          <span class="ciosp-crystal">CIOSP 2026</span>
+        </div>
 
         <h1 class="hero-title">
           <br/>
@@ -1342,38 +1725,47 @@
 
           <div class="hero-visual-main">
             <div class="hero-visual-highlight">
-              <h3>Marca forte, presença constante.</h3>
+              <h3>Longevity Lab Basel.</h3>
               <p>
-                Construção de relacionamento com foco em experiência do paciente, 
-                educação do profissional e presença qualificada no ponto de venda.
+                Um centro de excelência dedicado à construção de relacionamentos estratégicos, 
+                unindo experiência do paciente, qualificação profissional e presença ativa 
+                nos principais canais de venda. Nosso compromisso é elevar o padrão de cuidado 
+                com ciência, performance e proximidade.
               </p>
               <div class="hero-visual-badges">
-                <span>Programa de treinamento</span>
-                <span>Relacionamento com distribuidoras</span>
-                <span>Cuidado com o cliente</span>
-                <span>Ativo em eventos e ações</span>
+                <span>Programas de capacitação profissional</span>
+                <span>Parcerias estratégicas com distribuidoras</span>
+                <span>Suporte e acompanhamento ao cliente</span>
+                <span>Presença constante em eventos e iniciativas</span>
               </div>
+
             </div>
 
             <div class="hero-visual-metrics">
+
               <div class="hero-visual-metric">
-                <span>Eventos &amp; Feiras</span>
+                <span>Eventos & Feiras</span>
                 <strong>CIOSP 2026</strong>
               </div>
+
               <div class="hero-visual-metric">
-                <span>Horário &amp; data</span>
-                <strong>28–30/01: 10h às 20h</strong>
-                <strong>31/01: 10h às 18h</strong>
+                <span>Horário & Data</span>
+                <strong>28–30/01 • 10h às 20h</strong>
+                <strong>31/01 • 10h às 18h</strong>
               </div>
+
               <div class="hero-visual-metric">
                 <span>Confiança</span>
                 <strong>+10 anos de atuação no Brasil</strong>
               </div>
+
               <div class="hero-visual-metric">
                 <span>Foco</span>
-                <strong>Qualidade e longevidade</strong>
+                <strong>Qualidade, ciência e longevidade</strong>
               </div>
+
             </div>
+
           </div>
         </div>
       </div>
@@ -1395,9 +1787,15 @@
       <div class="carousel-container">
         <div class="carousel-premium">
           <div class="carousel-track">
-            <img src="img/edel 4.jpg" class="active" alt="Testes de qualidade" />
-            <img src="img/edel 3.jpg" alt="Profissional ensinando paciente a usar escova sonic" />
-            <img src="img/edel kids 3.jpg" alt="Profissional utilizando escova Edel White Kids para escovar a boca de uma criança" />
+            <img src="img/edel ciosp.jpeg" class="active" alt="Equipe Edel White" />
+            <img src="img/IMG_6430.jpg" alt="Atendimento ao cliente CIOSP" />
+            <img src="img/IMG_6291.jpg" alt="Atendimento ao cliente CIOSP" />
+            <img src="img/IMG_6336.jpg" alt="Atendimento ao cliente CIOSP" />
+            <img src="img/IMG_6204.jpg" alt="Atendimento ao cliente CIOSP" />
+            <img src="img/IMG_6292.jpg" alt="Atendimento ao cliente CIOSP" />
+            <img src="img/IMG_6278.jpg" alt="Atendimento ao cliente CIOSP" />
+            <img src="img/IMG_6284.jpg" alt="Atendimento ao cliente CIOSP" />
+
           </div>
           <button class="carousel-arrow left">&#10094;</button>
           <button class="carousel-arrow right">&#10095;</button>
@@ -1420,7 +1818,7 @@
       </div>
     </section>
 
-    <!-- ====== PRODUTOS / PORTFÓLIO ====== -->
+    <!-- ====== PRODUTOS / PORTFÓLIO (CARROSSEL) ====== -->
     <section id="produtos" class="fade-in">
       <div class="section-header">
         <div class="section-title-wrap">
@@ -1434,46 +1832,150 @@
         </p>
       </div>
 
-      <div class="products-grid">
-        <article class="product-card">
-          <div class="product-tag">Escovas Premium</div>
-          <h3 class="product-name">ESCOVA DE DENTES FLOSSERBRUSH ULTRASOFT</h3>
-          <p class="product-desc">
-            Cerdas ultrafinas e delicadas, indicadas para pacientes com sensibilidade gengival e pós-procedimentos.
-          </p>
-          <div class="product-meta">
-            <span>Principal canal: <strong>Consultórios &amp; distribuidores</strong></span>
-            <span class="product-pill">DESTAQUE EM INDICAÇÃO PROFISSIONAL</span>
-          </div>
-        </article>
+      <div class="products-carousel">
+        <div class="products-track">
+          <!-- CARD 1 -->
+          <article class="product-card">
+            <div class="product-tag">Escovas Premium</div>
+            <h3 class="product-name">ESCOVA DE DENTES FLOSSERBRUSH ULTRASOFT</h3>
+            <p class="product-desc">
+              Tecnologia suíça com cerdas ultrafinas de alta precisão, desenvolvidas para proporcionar
+              uma escovação extremamente delicada, eficaz e segura para pacientes com sensibilidade gengival
+              ou em cuidados pós-procedimento. Conforto absoluto com performance profissional.
+            </p>
+            <div class="product-meta">
+              <span>Principal canal: <strong>Consultórios, clínicas e distribuidores premium</strong></span>
+              <span class="product-pill">INDICAÇÃO PROFISSIONAL • TOQUE ULTRASOFT</span>
+            </div>
 
-        <article class="product-card">
-          <div class="product-tag">Higiene diária</div>
-          <h3 class="product-name">CREME DENTAL ANTIPLACA + BRANQUEADOR</h3>
-          <p class="product-desc">
-            Formulação desenvolvida para cuidado completo, unindo proteção, brilho e sensação de limpeza prolongada.
-          </p>
-          <div class="product-meta">
-            <span>Foco: <strong>Rotina diária do paciente</strong></span>
-            <span class="product-pill">ESPUMA CONTROLADA • FLÚOR BIODISPONÍVEL</span>
-          </div>
-        </article>
+            <div class="product-image">
+              <img src="img/ultrasoft png.png" alt="Escova Flosserbrush Ultrasoft Edel White">
+            </div>
+          </article>
 
-        <article class="product-card">
-          <div class="product-tag">Soluções específicas</div>
-          <h3 class="product-name">ANTISSÉPTICO BUCAL FRESH + PROTECT</h3>
-          <p class="product-desc">
-            Linha voltada para potencializar tratamentos e oferecer uma experiência completa de cuidado bucal.
-          </p>
-          <div class="product-meta">
-            <span>Estratégia: <strong>Cross-sell com escovas e cremes</strong></span>
-            <span class="product-pill">COMBATE NATURAL AO MAU HÁLITO</span>
-          </div>
-        </article>
+          <!-- CARD 2 -->
+          <article class="product-card">
+            <div class="product-tag">Higiene diária</div>
+            <h3 class="product-name">CREME DENTAL ANTIPLACA + BRANQUEADOR</h3>
+            <p class="product-desc">
+              Fórmula avançada que combina ação antiplaca, brilho imediato e refrescância prolongada.
+              Desenvolvido para entregar proteção completa, sensação de limpeza profissional e um cuidado
+              diário superior ao paciente.
+            </p>
+            <div class="product-meta">
+              <span>Foco: <strong>Tratamento diário completo com desempenho clínico</strong></span>
+              <span class="product-pill">ESPUMA COMPACTA • VEGANO</span>
+            </div>
+
+            <div class="product-image">
+              <img src="img/creme_whitening png.png" alt="Creme dental antiplaca e clareador Edel White">
+            </div>
+          </article>
+
+          <!-- CARD 3 -->
+          <article class="product-card">
+            <div class="product-tag">Soluções específicas</div>
+            <h3 class="product-name">ANTISSÉPTICO BUCAL FRESH + PROTECT</h3>
+            <p class="product-desc">
+              Solução de alta performance para complementar o tratamento clínico, potencializando a higiene
+              bucal e reforçando o controle do hálito. Fórmula equilibrada para proporcionar uma experiência
+              completa de cuidado, frescor e proteção contínua.
+            </p>
+            <div class="product-meta">
+              <span>Estratégia: <strong>Integração ideal com escovas e cremes da linha premium</strong></span>
+              <span class="product-pill">AÇÃO NATURAL • CONTROLE SUPERIOR DO MAU HÁLITO</span>
+            </div>
+
+            <div class="product-image">
+              <img src="img/antisseptico png.png" alt="Antisséptico Bucal Fresh + Protect Edel White">
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-tag">Limpeza profunda</div>
+            <h3 class="product-name">FLOSSERPIK PRO-STATION</h3>
+            <p class="product-desc">
+              Equipamento profissional projetado para uma higienização profunda e personalizada,
+              ideal para pacientes com implantes, próteses, pontes ou necessidades especiais.
+              Acompanha 4 ponteiras exclusivas que ampliam o alcance e garantem conforto absoluto.
+            </p>
+            <div class="product-meta">
+              <span>Estratégia: <strong>Precisão clínica com sensação de conforto e zero incômodo</strong></span>
+              <span class="product-pill">LIMPEZA PROFUNDA • REFRESCÂNCIA PROLONGADA</span>
+            </div>
+
+            <div class="product-image">
+              <img src="img/flosserpik png.png" alt="Flosserpik Pro-Station Edel White">
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-tag"></div>
+            <h3 class="product-name">SONIC GENERATION</h3>
+            <p class="product-desc">
+              A tecnologia sônica suíça em sua forma mais avançada. Um único dispositivo com 4 cabeças
+              multifuncionais projetadas para entregar limpeza superior, brilho, remoção de placa e cuidado
+              completo. Uma experiência premium com suavidade, potência e design minimalista.
+            </p>
+            <div class="product-meta">
+              <span>Estratégia: <strong>Padrão suíço de luxo, precisão e alta tecnologia</strong></span>
+              <span class="product-pill">PERFORMANCE SÔNICA • SUAVIDADE CONTROLADA</span>
+            </div>
+
+            <div class="product-image">
+              <img src="img/Sonic_Generation png.png" alt="Escova Sonic Generation Edel White">
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- ====== CUPONS ====== -->
+    <!-- ====== GALERIA / RENOVAÇÃO DA MARCA ====== -->
+    <section id="galeria" class="fade-in">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <div class="section-eyebrow">Rebranding &amp; Nova fase</div>
+          <h2 class="section-title">Renovação da marca, novos designs e um portfólio ainda mais forte.</h2>
+        </div>
+        <p class="section-subtitle">
+          A Edel White chega ao CIOSP 2026 com uma identidade renovada, embalagens atualizadas e um portfólio pensado para traduzir
+          tecnologia, sofisticação e cuidado em cada detalhe. Esta é a nova fase da marca, mais moderna, próxima e preparada para os próximos anos.
+        </p>
+      </div>
+
+      <div class="carousel-container">
+        <div class="carousel-premium">
+          <div class="carousel-track">
+            <img src="img/produto 6.png" class="active" alt="Novo estande Edel White em congresso" />
+            <img src="img/care forte novo.png" class="active" alt="Novo estande Edel White em congresso" />
+            <img src="img/stop sensitive.png" alt="Nova comunicação voltada para o público infantil" />
+            <img src="img/Escova sonic.png" alt="Experiências práticas apresentando a nova linha" />
+            <img src="img/Sonic B+.png" alt="Lançamento de produtos e nova identidade visual" />
+            <img src="img/Irrigador .png" alt="Lançamento de produtos e nova identidade visual" />
+            <img src="img/caixa irrigador.png" alt="Lançamento de produtos e nova identidade visual" />
+          </div>
+          <button class="carousel-arrow left">&#10094;</button>
+          <button class="carousel-arrow right">&#10095;</button>
+          <div class="carousel-dots"></div>
+        </div>
+
+        <div class="carousel-text">
+          <h3>Uma Edel White repaginada para o presente e preparada para o futuro.</h3>
+          <p>
+            A renovação da marca reflete nossa visão de longo prazo: unir ciência, design e experiência para criar uma presença marcante
+            em consultórios, clínicas, redes de varejo e na vida dos pacientes. CIOSP 2026 será o palco para apresentar essa nova fase.
+          </p>
+          <ul class="carousel-list">
+            <li>Embou embalagens com linguagem mais premium e moderna.</li>
+            <li>Portfólio reorganizado para facilitar indicação profissional e entendimento do paciente.</li>
+            <li>Estande e materiais visuais alinhados à nova identidade global da Edel White.</li>
+            <li>Lançamentos focados em performance, tecnologia e longevidade da saúde bucal.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CUPONS (AGORA NO FINAL DO SITE) ====== -->
     <section id="cupons" class="fade-in">
       <div class="section-header">
         <div class="section-title-wrap">
@@ -1490,8 +1992,9 @@
         <div class="coupon-left">
           <h3>Campanhas ativas</h3>
           <p>
-            Uma área exclusiva de cupons para campanhas, congressos e feiras, onde nossos clientes podem acessar 
-            benefícios únicos, ofertas especiais e condições exclusivas em cada evento Edel White.
+            Acesse cupons exclusivos desenvolvidos para ações promocionais, congressos e feiras.
+            Aqui, profissionais, consultórios e parceiros encontram vantagens especiais, condições diferenciadas
+            e benefícios que reforçam o compromisso Edel White com performance e excelência.
           </p>
 
           <div class="coupon-cards">
@@ -1499,22 +2002,22 @@
               <div class="coupon-label">CIOSP 2026 • Lançamento</div>
               <div class="coupon-code" data-coupon="CIOSP26">CIOSP26</div>
               <div class="coupon-extra">
-                10% de desconto em campanhas de lançamento durante o CIOSP 2026 (28 a 31 de janeiro).
+                10% de desconto em compras realizadas durante o CIOSP 2026 — uma condição especial para marcar o lançamento dos novos produtos Edel White.
               </div>
               <div class="coupon-footer">
-                <span>Válido apenas no período do evento</span>
+                <span>Disponível exclusivamente no período do CIOSP 2026</span>
                 <button class="btn btn-outline btn-copy" data-coupon="CIOSP26">Copiar</button>
               </div>
             </div>
 
             <div class="coupon-card">
-              <div class="coupon-label">TODOS OS PRODUTOS</div>
+              <div class="coupon-label">Todos os produtos</div>
               <div class="coupon-code" data-coupon="EDEL05">EDEL05</div>
               <div class="coupon-extra">
-                Condição especial para profissionais parceiros e ações em consultórios.
+                Condição especial destinada a profissionais parceiros e consultórios que buscam elevar a experiência do paciente com produtos de alto desempenho.
               </div>
               <div class="coupon-footer">
-                <span>Uso restrito • Comercial</span>
+                <span>Disponível exclusivamente no período do CIOSP 2026</span>
                 <button class="btn btn-outline btn-copy" data-coupon="EDEL05">Copiar</button>
               </div>
             </div>
@@ -1523,10 +2026,10 @@
 
         <aside class="coupon-right">
           <div>
-            <h3>Relacionamento que se traduz em resultado.</h3>
+            <h3>Relacionamento que gera resultados.</h3>
             <p>
-              Nossa área de cupons foi criada para potencializar campanhas digitais, ações promocionais e experiências em eventos como o CIOSP 2026, 
-              oferecendo vantagens exclusivas para profissionais dentistas e consumidores finais que desejam conhecer e adquirir produtos Edel White com benefícios especiais.
+              A área de cupons foi criada para fortalecer ações digitais, impulsionar campanhas estratégicas e potencializar experiências em eventos como o CIOSP 2026.
+              Um programa pensado para profissionais e consumidores que buscam adquirir produtos Edel White com condições exclusivas e vantagens reais.
             </p>
           </div>
 
@@ -1542,46 +2045,6 @@
             </div>
           </div>
         </aside>
-      </div>
-    </section>
-
-    <!-- ====== GALERIA / CARROSSEL ====== -->
-    <section id="galeria" class="fade-in">
-      <div class="section-header">
-        <div class="section-title-wrap">
-          <div class="section-eyebrow">Galeria</div>
-          <h2 class="section-title">Momentos que reforçam a presença da Edel White.</h2>
-        </div>
-        <p class="section-subtitle">
-          Eventos, treinamentos, campanhas e congressos que fortalecem nosso relacionamento com o mercado.
-        </p>
-      </div>
-
-      <div class="carousel-container">
-        <div class="carousel-premium">
-          <div class="carousel-track">
-            <img src="img/edel ciosp.jpeg" class="active" alt="Evento com profissionais de odontologia" />
-            <img src="img/edel kids 1.jpg" alt="Apresentação de produtos para crianças" />
-            <img src="img/edel kids 2.jpg" alt="Ensinando crianças a fazerem higiene bucal" />
-            <img src="img/edel ciosp 1.jpg" alt="Estande Edel White em congresso" />
-          </div>
-          <button class="carousel-arrow left">&#10094;</button>
-          <button class="carousel-arrow right">&#10095;</button>
-          <div class="carousel-dots"></div>
-        </div>
-
-        <div class="carousel-text">
-          <h3>Apresentando qualidade, tecnologia e inovação para o cuidado da saúde bucal.</h3>
-          <p>
-            Com o nosso compromisso em promover cuidados reais e garantir a longevidade da saúde bucal, valorizamos profundamente cada oportunidade de participar de ações que nos permitem apresentar,
-            com transparência e excelência, aquilo que desejamos para nossos clientes: qualidade, inovação e bem-estar em cada detalhe.
-          </p>
-          <ul class="carousel-list">
-            <li>Participação em congressos e feiras.</li>
-            <li>Ativações em PDVs com foco em experiência de marca.</li>
-            <li>Momentos com lideranças e parceiros estratégicos.</li>
-          </ul>
-        </div>
       </div>
     </section>
   </main>
@@ -1636,6 +2099,31 @@
   <script>
     // ====== CONFIG: URL do Google Forms para "Palestras" ======
     const palestrasFormUrl = "https://forms.gle/SEU_FORMULARIO_AQUI";
+
+    // ====== TEMA CLARO/ESCURO ======
+    const themeToggleBtn = document.getElementById('themeToggle');
+
+    function applyTheme(theme) {
+      const isDark = theme === 'dark';
+      document.body.classList.toggle('theme-dark', isDark);
+      document.body.classList.toggle('theme-light', !isDark);
+      if (themeToggleBtn) {
+        themeToggleBtn.textContent = isDark ? 'Modo claro' : 'Modo escuro';
+      }
+    }
+
+    const savedTheme = localStorage.getItem('edelwhite-theme');
+    const initialTheme = savedTheme || 'light';
+    applyTheme(initialTheme);
+
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', () => {
+        const current = document.body.classList.contains('theme-dark') ? 'dark' : 'light';
+        const next = current === 'dark' ? 'light' : 'dark';
+        applyTheme(next);
+        localStorage.setItem('edelwhite-theme', next);
+      });
+    }
 
     // ====== NAV: scroll suave + highlight link ativo ======
     const navLinks = document.querySelectorAll('.nav-link');
@@ -1700,7 +2188,6 @@
       let index = 0;
       let interval;
 
-      // Criar dots dinamicamente
       imgs.forEach((_, i) => {
         const dot = document.createElement("button");
         if (i === 0) dot.classList.add("active");
@@ -1756,6 +2243,55 @@
       update();
       startAutoPlay();
     });
+
+    // ===== CARROSSEL DE PRODUTOS (LOOP INFINITO) =====
+    const productsTrack = document.querySelector('.products-track');
+
+    if (productsTrack) {
+      let isPaused = false;
+      const baseCards = Array.from(productsTrack.children);
+
+      if (baseCards.length > 0) {
+        baseCards.forEach(card => {
+          const clone = card.cloneNode(true);
+          clone.setAttribute('aria-hidden', 'true');
+          productsTrack.appendChild(clone);
+        });
+
+        let position = 0;
+        const SPEED = 0.4;
+
+        function animate() {
+          if (!isPaused) {
+            position -= SPEED;
+
+            const firstCard = productsTrack.children[0];
+            const cardRect = firstCard.getBoundingClientRect();
+            const gap = 24;
+            const cardWidth = cardRect.width + gap;
+
+            if (Math.abs(position) >= cardWidth) {
+              position += cardWidth;
+              productsTrack.appendChild(firstCard);
+            }
+
+            productsTrack.style.transform = `translateX(${position}px)`;
+          }
+
+          requestAnimationFrame(animate);
+        }
+
+        productsTrack.addEventListener('mouseenter', () => {
+          isPaused = true;
+        });
+
+        productsTrack.addEventListener('mouseleave', () => {
+          isPaused = false;
+        });
+
+        requestAnimationFrame(animate);
+      }
+    }
 
     // ====== COPIAR CUPONS ======
     const copyButtons = document.querySelectorAll('.btn-copy');
@@ -1969,7 +2505,6 @@
       });
     }
 
-    // EVENTOS MODAL
     btnRepresentantes.forEach(btn => btn.addEventListener("click", abrirModalRepresentantes));
     closeRepresentantesModal.addEventListener("click", fecharModalRepresentantes);
 
